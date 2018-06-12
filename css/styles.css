@@ -63,7 +63,45 @@ a {
     height: auto;
     max-width: 503px;
     max-height: 186px;
-    margin: 20px 0; }
+    margin: 20px auto;
+    display: block; }
 
 .speakers {
   background: #3b3c3d; }
+  .speakers h3 {
+    text-align: center; }
+  .speakers .speaker-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-item: center; }
+    .speakers .speaker-list .speaker {
+      margin: 20px;
+      width: 220px;
+      text-align: center; }
+      .speakers .speaker-list .speaker .photo {
+        width: 220px;
+        text-align: left;
+        position: relative; }
+        .speakers .speaker-list .speaker .photo img {
+          width: 200px;
+          heigth: 200px;
+          border-radius: 50%; }
+        .speakers .speaker-list .speaker .photo .company {
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          bottom: 0;
+          right: 0; }
+          .speakers .speaker-list .speaker .photo .company img {
+            border-radius: 50%;
+            background: white;
+            width: 80px;
+            height: 80px;
+            vertical-align: middle; }
+      .speakers .speaker-list .speaker .name {
+        font-weight: 900;
+        margin-top: 10px; }
+      .speakers .speaker-list .speaker .title {
+        margin-top: 5px;
+        font-size: 16px; }
