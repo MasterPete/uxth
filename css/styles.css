@@ -4,7 +4,8 @@
 html {
   font-family: 'Nunito Sans', sans-serif;
   background: #181919;
-  color: #f2f3f4; }
+  color: #f2f3f4;
+  font-size: 20px; }
 
 a {
   color: white;
@@ -12,10 +13,17 @@ a {
   border-bottom: 1px dotted #f2f3f4; }
   a:hover, a:active {
     color: #5decf3; }
+  a.button {
+    border-bottom: none;
+    font-weight: 900;
+    background: #0f1d4f;
+    padding: 10px 15px;
+    display: block; }
 
 .hero {
   background: #098ed8 url("/img/hero.jpg") no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  text-align: center; }
   .hero .header {
     padding: 15px;
     display: flex;
@@ -27,4 +35,35 @@ a {
       margin: 0; }
       .hero .header .menu li {
         display: inline-block;
-        margin-right: 10px; }
+        margin-right: 10px;
+        font-size: 16px; }
+  .hero .container {
+    padding: 15px 15px 50px 15px; }
+    .hero .container .title {
+      font-size: 20px;
+      padding-bottom: 10px; }
+      .hero .container .title img {
+        margin-bottom: -20px; }
+    .hero .container h1 {
+      line-height: 1;
+      font-size: 36px; }
+    .hero .container .ticket {
+      font-size: 20px; }
+      .hero .container .ticket .time {
+        font-weight: 900;
+        padding-top: 15px; }
+      .hero .container .ticket .button {
+        margin-top: 15px; }
+
+.highlights {
+  padding: 30px 15px 60px 15px;
+  text-align: center; }
+  .highlights img {
+    width: 100%;
+    height: auto;
+    max-width: 503px;
+    max-height: 186px;
+    margin: 20px 0; }
+
+.speakers {
+  background: #3b3c3d; }

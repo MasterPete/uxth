@@ -20,7 +20,7 @@ html
   font-family: 'Nunito Sans', sans-serif
   background: $black
   color: $white
-
+  font-size: 20px
 
 a
   color: white
@@ -28,13 +28,18 @@ a
   border-bottom: 1px dotted $white
   &:hover, &:active
     color: lighten($bright-blue, 10)
-
-
+  &.button
+    border-bottom: none
+    font-weight: 900
+    background: $navi
+    padding: 10px 15px
+    display: block
 
 
 .hero
   background: $peacock-blue url('/img/hero.jpg') no-repeat center center
   background-size: cover
+  text-align: center
   .header
     padding: 15px
     display: flex
@@ -47,6 +52,46 @@ a
       li
         display: inline-block
         margin-right: 10px
+        font-size: 16px
+  .container
+    padding: 15px 15px 50px 15px
+    .title
+      img
+        margin-bottom: -20px
+      font-size: 20px
+      padding-bottom: 10px
+    h1
+      line-height: 1
+      font-size: 36px
+    .ticket
+      font-size: 20px
+      .time
+        font-weight: 900
+        padding-top: 15px
+      .button
+        margin-top: 15px
+
+.highlights
+  padding: 30px 15px 60px 15px
+  text-align: center
+  img
+    width: 100%
+    height: auto
+    max-width: 503px
+    max-height: 186px
+    margin: 20px 0
+
+
+.speakers
+  background: $dark
+
+
+
+
+
+
+
+
 
 
 
