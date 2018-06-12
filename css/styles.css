@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  background: #181919;
+  color: #f2f3f4; }
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted #f2f3f4; }
+  a:hover, a:active {
+    color: #5decf3; }
+
+.hero {
+  background: #098ed8 url("/img/hero.jpg") no-repeat center center;
+  background-size: cover; }
+  .hero .header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .hero .header .menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      .hero .header .menu li {
+        display: inline-block;
+        margin-right: 10px; }
