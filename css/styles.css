@@ -5,7 +5,13 @@ html {
   font-family: 'Nunito Sans', sans-serif;
   background: #181919;
   color: #f2f3f4;
-  font-size: 20px; }
+  font-size: 20px;
+  font-weight: 200; }
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2; }
 
 a {
   color: white;
@@ -15,10 +21,13 @@ a {
     color: #5decf3; }
   a.button {
     border-bottom: none;
-    font-weight: 900;
+    font-weight: 800;
     background: #0f1d4f;
     padding: 10px 15px;
-    display: block; }
+    display: block;
+    text-align: center; }
+    a.button.light {
+      background: #098ed8; }
 
 .hero {
   background: #098ed8 url("/img/hero.jpg") no-repeat center center;
@@ -47,12 +56,12 @@ a {
     .hero .container h1 {
       line-height: 1;
       font-size: 36px; }
-    .hero .container .ticket {
+    .hero .container .ticket-box {
       font-size: 20px; }
-      .hero .container .ticket .time {
-        font-weight: 900;
+      .hero .container .ticket-box .time {
+        font-weight: 800;
         padding-top: 15px; }
-      .hero .container .ticket .button {
+      .hero .container .ticket-box .button {
         margin-top: 15px; }
 
 .highlights {
@@ -69,9 +78,6 @@ a {
 .speakers {
   background: #3b3c3d;
   padding: 25px; }
-  .speakers h3 {
-    text-align: center;
-    padding-top: 40px; }
   .speakers .speaker-list {
     display: flex;
     flex-wrap: wrap;
@@ -101,7 +107,7 @@ a {
             width: 80px;
             height: 80px; }
       .speakers .speaker-list .speaker .name {
-        font-weight: 900;
+        font-weight: 800;
         margin-top: 10px; }
       .speakers .speaker-list .speaker .title {
         margin-top: 5px;
@@ -128,10 +134,9 @@ a {
   background-size: cover;
   padding: 25px 0 0 0; }
   .vision h3 {
-    text-align: center;
-    font-weight: normal; }
+    font-weight: 200; }
   .vision .visual {
-    padding: 0 25px 25px 25px; }
+    padding: 0 40px 25px 40px; }
     .vision .visual h4 {
       text-align: center;
       font-size: 26px;
@@ -143,5 +148,33 @@ a {
   .vision .history {
     background: rgba(0, 0, 0, 0.5);
     padding: 25px; }
-    .vision .history p {
-      font-size: 16px; }
+
+.sponsor {
+  padding: 40px 25px; }
+  .sponsor h3 {
+    margin: 0; }
+    .sponsor h3 span {
+      display: block;
+      font-weight: 200; }
+
+.ticket {
+  padding: 25px 25px 60px 25px;
+  background: #03aaf4;
+  text-align: center; }
+  .ticket h3 {
+    margin: 0; }
+  .ticket .note {
+    margin: 0; }
+  .ticket .price {
+    padding: 40px 0 20px; }
+    .ticket .price .discount {
+      text-decoration: line-through;
+      line-height: 0.7;
+      font-weight: 800; }
+    .ticket .price .actual {
+      font-size: 40px;
+      font-weight: 800; }
+      .ticket .price .actual span {
+        font-weight: 200;
+        font-size: 20px;
+        padding-left: 10px; }

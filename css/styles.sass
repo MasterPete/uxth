@@ -14,6 +14,10 @@ $black: #181919
 
 
 
+
+
+
+
 *
   box-sizing: border-box
 html
@@ -21,6 +25,12 @@ html
   background: $black
   color: $white
   font-size: 20px
+  font-weight: 200
+
+h3
+  text-align: center
+  font-size: 30px
+  line-height: 1.2
 
 a
   color: white
@@ -30,10 +40,13 @@ a
     color: lighten($bright-blue, 10)
   &.button
     border-bottom: none
-    font-weight: 900
+    font-weight: 800
     background: $navi
     padding: 10px 15px
     display: block
+    text-align: center
+    &.light
+      background: $peacock-blue
 
 
 .hero
@@ -63,10 +76,10 @@ a
     h1
       line-height: 1
       font-size: 36px
-    .ticket
+    .ticket-box
       font-size: 20px
       .time
-        font-weight: 900
+        font-weight: 800
         padding-top: 15px
       .button
         margin-top: 15px
@@ -86,9 +99,6 @@ a
 .speakers
   background: $dark
   padding: 25px
-  h3
-    text-align: center
-    padding-top: 40px
   .speaker-list
     display: flex
     flex-wrap: wrap
@@ -119,7 +129,7 @@ a
             height: 80px
 
       .name
-        font-weight: 900
+        font-weight: 800
         margin-top: 10px
       .title
         margin-top: 5px
@@ -153,10 +163,9 @@ a
   background-size: cover
   padding: 25px 0 0 0
   h3
-    text-align: center
-    font-weight: normal
+    font-weight: 200
   .visual
-    padding: 0 25px 25px 25px
+    padding: 0 40px 25px 40px
     h4
       text-align: center
       font-size: 26px
@@ -169,12 +178,36 @@ a
   .history
     background: rgba(0,0,0,0.5)
     padding: 25px
-    p
-      font-size: 16px
 
+.sponsor
+  padding: 40px 25px
+  h3
+    margin: 0
+    span
+      display: block
+      font-weight: 200
 
-
-
+.ticket
+  padding: 25px 25px 60px 25px
+  background: $light-blue
+  text-align: center
+  h3
+    margin: 0
+  .note
+    margin: 0
+  .price
+    padding: 40px 0 20px
+    .discount
+      text-decoration: line-through
+      line-height: 0.7
+      font-weight: 800
+    .actual
+      font-size: 40px
+      font-weight: 800
+      span
+        font-weight: 200
+        font-size: 20px
+        padding-left: 10px
 
 
 
