@@ -15,6 +15,20 @@ $black: #181919
 
 
 
+=breakpoint($point)
+  @if $point == xl
+    @media (min-width: 1200px)
+      @content
+  @else if $point == lg
+    @media (min-width: 992px)
+      @content
+  @else if $point == md
+    @media (min-width: 768px)
+      @content
+  @else if $point == sm
+    @media (min-width: 576px)
+      @content
+
 
 
 
@@ -26,6 +40,8 @@ html
   color: $white
   font-size: 20px
   font-weight: 200
+  +breakpoint(sm)
+    font-size: 26px
 
 h3
   text-align: center
@@ -45,8 +61,21 @@ a
     padding: 10px 15px
     display: block
     text-align: center
+    +breakpoint(sm)
+      max-width: 300px
+      margin: 0 auto
     &.light
       background: $peacock-blue
+
++breakpoint(lg)
+  .text-container
+    max-width: 850px
+    margin: 0 auto
+
+
+
+
+
 
 
 .hero
@@ -67,17 +96,26 @@ a
         margin-right: 10px
         font-size: 16px
   .container
-    padding: 15px 25px 50px 25px
+    padding: 15px 25px 80px 25px
     .title
       img
         margin-bottom: -20px
       font-size: 20px
       padding-bottom: 10px
+      +breakpoint(sm)
+        font-size: 30px
     h1
       line-height: 1
       font-size: 36px
+      +breakpoint(sm)
+        font-size: 50px
+      +breakpoint(lg)
+        span
+          display: block
+        font-size: 60px
+        padding: 60px 0
     .ticket-box
-      font-size: 20px
+      padding-top: 40px
       .time
         font-weight: 800
         padding-top: 15px
@@ -85,9 +123,27 @@ a
         margin-top: 15px
 
 .highlights
-  padding: 30px 25px 60px 25px
+  padding: 60px 25px 100px 25px
   text-align: center
-  img
+  +breakpoint(sm)
+    padding: 60px 50px 100px 50px
+  .last-year
+    height: 200px
+
+    background-color: transparent
+    background-image: url('/img/last-year.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    +breakpoint(md)
+      height: 300px
+      margin-bottom: 10px
+    +breakpoint(lg)
+      height: 400px
+      background-image: url('/img/last-year-hd.jpg')
+
+
+  //img
     width: 100%
     height: auto
     max-width: 503px
@@ -98,7 +154,7 @@ a
 
 .speakers
   background: $dark
-  padding: 25px
+  padding: 80px 25px
   .speaker-list
     display: flex
     flex-wrap: wrap
@@ -155,40 +211,56 @@ a
               display: block
               border-radius: 50%
 
-  //.notes
+  .notes
     text-align: center
+    +breakpoint(sm)
+      span
+        display: block
 
 .vision
   background: transparent url('/img/vision.jpg') no-repeat center center
   background-size: cover
-  padding: 25px 0 0 0
+  padding: 60px 0 0 0
   h3
     font-weight: 200
   .visual
-    padding: 0 40px 25px 40px
+    padding: 0 40px 40px 40px
+    text-align: center
     h4
       text-align: center
       font-size: 26px
       margin: 10px 0 60px 0
+      +breakpoint(sm)
+        font-size: 36px
       span
         display: block
+
     img
       width: 100%
+      max-width: 329px
+
 
   .history
     background: rgba(0,0,0,0.5)
-    padding: 25px
+    padding: 25px 25px 80px 25px
+    +breakpoint(sm)
+      padding: 25px 50px 80px 50px
+
 
 .sponsor
-  padding: 40px 25px
+  padding: 80px 25px
+  +breakpoint(sm)
+    padding: 80px 50px
   h3
-    margin: 0
+    margin: 0 0 60px 0
     span
       display: block
       font-weight: 200
+  .button
+    margin-top: 60px
 
 .ticket
-  padding: 25px 25px 60px 25px
+  padding: 80px 25px 120px 25px
   background: $light-blue
   text-align: center
   h3
@@ -222,7 +294,15 @@ a
 
 
 
-
+html
+  +breakpoint(sm)
+    border: 1px solid pink
+  +breakpoint(md)
+    border: 1px solid orange
+  +breakpoint(lg)
+    border: 1px solid lightblue
+  +breakpoint(xl)
+    border: 1px solid lightgreen
 
 
 
