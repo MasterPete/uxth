@@ -114,11 +114,14 @@ a
           display: block
         font-size: 60px
         padding: 60px 0
+      +breakpoint(xl)
+        font-size: 70px
     .ticket-box
-      padding-top: 40px
+      padding-top: 25px
+      +breakpoint(xl)
+        font-size: 30px
       .time
         font-weight: 800
-        padding-top: 15px
       .button
         margin-top: 15px
 
@@ -160,6 +163,9 @@ a
     flex-wrap: wrap
     justify-content: center
     align-item: center
+    +breakpoint(lg)
+      max-width: 1100px
+      margin: 0 auto
     .speaker
       margin: 20px
       width: 220px
@@ -234,6 +240,10 @@ a
         font-size: 36px
       span
         display: block
+      +breakpoint(lg)
+        font-size: 46px
+        span
+          display: inline
 
     img
       width: 100%

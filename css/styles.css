@@ -80,11 +80,16 @@ a {
           padding: 60px 0; }
           .hero .container h1 span {
             display: block; } }
+      @media (min-width: 1200px) {
+        .hero .container h1 {
+          font-size: 70px; } }
     .hero .container .ticket-box {
-      padding-top: 40px; }
+      padding-top: 25px; }
+      @media (min-width: 1200px) {
+        .hero .container .ticket-box {
+          font-size: 30px; } }
       .hero .container .ticket-box .time {
-        font-weight: 800;
-        padding-top: 15px; }
+        font-weight: 800; }
       .hero .container .ticket-box .button {
         margin-top: 15px; }
 
@@ -118,6 +123,10 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-item: center; }
+    @media (min-width: 992px) {
+      .speakers .speaker-list {
+        max-width: 1100px;
+        margin: 0 auto; } }
     .speakers .speaker-list .speaker {
       margin: 20px;
       width: 220px;
@@ -187,6 +196,11 @@ a {
           font-size: 36px; } }
       .vision .visual h4 span {
         display: block; }
+      @media (min-width: 992px) {
+        .vision .visual h4 {
+          font-size: 46px; }
+          .vision .visual h4 span {
+            display: inline; } }
     .vision .visual img {
       width: 100%;
       max-width: 329px; }
