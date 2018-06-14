@@ -38,7 +38,7 @@ a {
         margin-right: 10px;
         font-size: 16px; }
   .hero .container {
-    padding: 15px 15px 50px 15px; }
+    padding: 15px 25px 50px 25px; }
     .hero .container .title {
       font-size: 20px;
       padding-bottom: 10px; }
@@ -56,7 +56,7 @@ a {
         margin-top: 15px; }
 
 .highlights {
-  padding: 30px 15px 60px 15px;
+  padding: 30px 25px 60px 25px;
   text-align: center; }
   .highlights img {
     width: 100%;
@@ -67,9 +67,11 @@ a {
     display: block; }
 
 .speakers {
-  background: #3b3c3d; }
+  background: #3b3c3d;
+  padding: 25px; }
   .speakers h3 {
-    text-align: center; }
+    text-align: center;
+    padding-top: 40px; }
   .speakers .speaker-list {
     display: flex;
     flex-wrap: wrap;
@@ -97,11 +99,49 @@ a {
             border-radius: 50%;
             background: white;
             width: 80px;
-            height: 80px;
-            vertical-align: middle; }
+            height: 80px; }
       .speakers .speaker-list .speaker .name {
         font-weight: 900;
         margin-top: 10px; }
       .speakers .speaker-list .speaker .title {
         margin-top: 5px;
         font-size: 16px; }
+      .speakers .speaker-list .speaker.tba .photo > span {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #098ed8;
+        display: flex;
+        justify-content: center;
+        align-item: center;
+        font-size: 152px;
+        color: #03aaf4; }
+      .speakers .speaker-list .speaker.tba .photo .company > span {
+        background: #03aaf4;
+        width: 80px;
+        height: 80px;
+        display: block;
+        border-radius: 50%; }
+
+.vision {
+  background: transparent url("/img/vision.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 25px 0 0 0; }
+  .vision h3 {
+    text-align: center;
+    font-weight: normal; }
+  .vision .visual {
+    padding: 0 25px 25px 25px; }
+    .vision .visual h4 {
+      text-align: center;
+      font-size: 26px;
+      margin: 10px 0 60px 0; }
+      .vision .visual h4 span {
+        display: block; }
+    .vision .visual img {
+      width: 100%; }
+  .vision .history {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px; }
+    .vision .history p {
+      font-size: 16px; }

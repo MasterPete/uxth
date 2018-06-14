@@ -54,7 +54,7 @@ a
         margin-right: 10px
         font-size: 16px
   .container
-    padding: 15px 15px 50px 15px
+    padding: 15px 25px 50px 25px
     .title
       img
         margin-bottom: -20px
@@ -72,7 +72,7 @@ a
         margin-top: 15px
 
 .highlights
-  padding: 30px 15px 60px 15px
+  padding: 30px 25px 60px 25px
   text-align: center
   img
     width: 100%
@@ -85,18 +85,17 @@ a
 
 .speakers
   background: $dark
+  padding: 25px
   h3
     text-align: center
+    padding-top: 40px
   .speaker-list
     display: flex
     flex-wrap: wrap
     justify-content: center
     align-item: center
     .speaker
-      //border: 1px solid red
       margin: 20px
-
-
       width: 220px
       text-align: center
       .photo
@@ -118,7 +117,6 @@ a
             background: white
             width: 80px
             height: 80px
-            vertical-align: middle
 
       .name
         font-weight: 900
@@ -126,6 +124,54 @@ a
       .title
         margin-top: 5px
         font-size: 16px
+
+      &.tba
+        .photo
+          > span
+            width: 200px
+            height: 200px
+            border-radius: 50%
+            background: $peacock-blue
+            display: flex
+            justify-content: center
+            align-item: center
+            font-size: 152px
+            color: $light-blue
+          .company
+            > span
+              background: $light-blue
+              width: 80px
+              height: 80px
+              display: block
+              border-radius: 50%
+
+  //.notes
+    text-align: center
+
+.vision
+  background: transparent url('/img/vision.jpg') no-repeat center center
+  background-size: cover
+  padding: 25px 0 0 0
+  h3
+    text-align: center
+    font-weight: normal
+  .visual
+    padding: 0 25px 25px 25px
+    h4
+      text-align: center
+      font-size: 26px
+      margin: 10px 0 60px 0
+      span
+        display: block
+    img
+      width: 100%
+
+  .history
+    background: rgba(0,0,0,0.5)
+    padding: 25px
+    p
+      font-size: 16px
+
 
 
 
