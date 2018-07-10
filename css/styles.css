@@ -41,56 +41,56 @@ a {
     max-width: 850px;
     margin: 0 auto; } }
 
-.hero {
+#hero {
   background: #098ed8 url("../img/hero.jpg") no-repeat center center;
   background-size: cover;
   text-align: center; }
-  .hero .header {
+  #hero .header {
     padding: 15px;
     display: flex;
     justify-content: space-between;
     width: 100%; }
-    .hero .header .menu {
+    #hero .header .menu {
       list-style-type: none;
       padding: 0;
       margin: 0; }
-      .hero .header .menu li {
+      #hero .header .menu li {
         display: inline-block;
         margin-right: 10px;
         font-size: 16px; }
-  .hero .container {
+  #hero .container {
     padding: 15px 25px 80px 25px; }
-    .hero .container .title {
+    #hero .container .title {
       font-size: 20px;
       padding-bottom: 10px; }
-      .hero .container .title img {
+      #hero .container .title img {
         margin-bottom: -20px; }
       @media (min-width: 576px) {
-        .hero .container .title {
+        #hero .container .title {
           font-size: 30px; } }
-    .hero .container h1 {
+    #hero .container h1 {
       line-height: 1;
       font-size: 36px; }
       @media (min-width: 576px) {
-        .hero .container h1 {
+        #hero .container h1 {
           font-size: 50px; } }
       @media (min-width: 992px) {
-        .hero .container h1 {
+        #hero .container h1 {
           font-size: 60px;
           padding: 60px 0; }
-          .hero .container h1 span {
+          #hero .container h1 span {
             display: block; } }
       @media (min-width: 1200px) {
-        .hero .container h1 {
+        #hero .container h1 {
           font-size: 70px; } }
-    .hero .container .ticket-box {
+    #hero .container .ticket-box {
       padding-top: 25px; }
       @media (min-width: 1200px) {
-        .hero .container .ticket-box {
+        #hero .container .ticket-box {
           font-size: 30px; } }
-      .hero .container .ticket-box .time {
+      #hero .container .ticket-box .time {
         font-weight: 800; }
-      .hero .container .ticket-box .button {
+      #hero .container .ticket-box .button {
         margin-top: 15px; }
 
 .highlights {
@@ -115,48 +115,48 @@ a {
         height: 400px;
         background-image: url("../img/last-year-hd.jpg"); } }
 
-.speakers {
+#speakers {
   background: #3b3c3d;
   padding: 80px 25px; }
-  .speakers .speaker-list {
+  #speakers .speaker-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-item: center; }
     @media (min-width: 992px) {
-      .speakers .speaker-list {
+      #speakers .speaker-list {
         max-width: 1100px;
         margin: 0 auto; } }
-    .speakers .speaker-list .speaker {
+    #speakers .speaker-list .speaker {
       margin: 20px;
       width: 220px;
       text-align: center; }
-      .speakers .speaker-list .speaker .photo {
+      #speakers .speaker-list .speaker .photo {
         width: 220px;
         text-align: left;
         position: relative; }
-        .speakers .speaker-list .speaker .photo img {
+        #speakers .speaker-list .speaker .photo img {
           width: 200px;
           heigth: 200px;
           border-radius: 50%; }
-        .speakers .speaker-list .speaker .photo .company {
+        #speakers .speaker-list .speaker .photo .company {
           width: 80px;
           height: 80px;
           position: absolute;
           bottom: 0;
           right: 0; }
-          .speakers .speaker-list .speaker .photo .company img {
+          #speakers .speaker-list .speaker .photo .company img {
             border-radius: 50%;
             background: white;
             width: 80px;
             height: 80px; }
-      .speakers .speaker-list .speaker .name {
+      #speakers .speaker-list .speaker .name {
         font-weight: 800;
         margin-top: 10px; }
-      .speakers .speaker-list .speaker .title {
+      #speakers .speaker-list .speaker .title {
         margin-top: 5px;
         font-size: 16px; }
-      .speakers .speaker-list .speaker.tba .photo > span {
+      #speakers .speaker-list .speaker.tba .photo > span {
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -166,62 +166,62 @@ a {
         align-item: center;
         font-size: 152px;
         color: #03aaf4; }
-      .speakers .speaker-list .speaker.tba .photo .company > span {
+      #speakers .speaker-list .speaker.tba .photo .company > span {
         background: #03aaf4;
         width: 80px;
         height: 80px;
         display: block;
         border-radius: 50%; }
-  .speakers .notes {
+  #speakers .notes {
     text-align: center; }
     @media (min-width: 576px) {
-      .speakers .notes span {
+      #speakers .notes span {
         display: block; } }
 
-.vision {
+#vision {
   background: transparent url("../img/vision.jpg") no-repeat center center;
   background-size: cover;
   padding: 60px 0 0 0; }
-  .vision h3 {
+  #vision h3 {
     font-weight: 200; }
-  .vision .visual {
+  #vision .visual {
     padding: 0 40px 40px 40px;
     text-align: center; }
-    .vision .visual h4 {
+    #vision .visual h4 {
       text-align: center;
       font-size: 26px;
       margin: 10px 0 60px 0; }
       @media (min-width: 576px) {
-        .vision .visual h4 {
+        #vision .visual h4 {
           font-size: 36px; } }
-      .vision .visual h4 span {
+      #vision .visual h4 span {
         display: block; }
       @media (min-width: 992px) {
-        .vision .visual h4 {
+        #vision .visual h4 {
           font-size: 46px; }
-          .vision .visual h4 span {
+          #vision .visual h4 span {
             display: inline; } }
-    .vision .visual img {
+    #vision .visual img {
       width: 100%;
       max-width: 329px; }
-  .vision .history {
+  #vision .history {
     background: rgba(0, 0, 0, 0.5);
     padding: 25px 25px 80px 25px; }
     @media (min-width: 576px) {
-      .vision .history {
+      #vision .history {
         padding: 25px 50px 80px 50px; } }
 
-.sponsor {
+#sponsors {
   padding: 80px 25px; }
   @media (min-width: 576px) {
-    .sponsor {
+    #sponsors {
       padding: 80px 50px; } }
-  .sponsor h3 {
+  #sponsors h3 {
     margin: 0 0 60px 0; }
-    .sponsor h3 span {
+    #sponsors h3 span {
       display: block;
       font-weight: 200; }
-  .sponsor .button {
+  #sponsors .button {
     margin-top: 60px; }
 
 .ticket {
