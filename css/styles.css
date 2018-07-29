@@ -277,19 +277,3 @@ a {
         background: #1c3182; }
       .ticket .ticket-group .ticket-type.full > a {
         background: #0f1d4f; }
-
-@media (min-width: 576px) {
-  html {
-    border: 2px solid pink; } }
-
-@media (min-width: 768px) {
-  html {
-    border: 2px solid orange; } }
-
-@media (min-width: 992px) {
-  html {
-    border: 2px solid lightblue; } }
-
-@media (min-width: 1200px) {
-  html {
-    border: 2px solid lightgreen; } }
