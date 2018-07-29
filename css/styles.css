@@ -64,24 +64,24 @@ a {
     padding: 15px 25px 80px 25px; }
     #hero .container .title {
       font-size: 20px;
-      padding-bottom: 10px; }
+      padding-bottom: 30px; }
       #hero .container .title img {
         margin-bottom: -20px;
-        width: 100%;
-        max-width: 572px; }
+        width: 80%;
+        max-width: 400px; }
       @media (min-width: 576px) {
         #hero .container .title {
           font-size: 30px; } }
     #hero .container h1 {
       line-height: 1;
-      font-size: 36px; }
+      font-size: 30px; }
       @media (min-width: 576px) {
         #hero .container h1 {
           font-size: 50px; } }
       @media (min-width: 992px) {
         #hero .container h1 {
           font-size: 60px;
-          padding: 60px 0; }
+          padding: 40px 0; }
           #hero .container h1 span {
             display: block; } }
       @media (min-width: 1200px) {
@@ -229,7 +229,7 @@ a {
     margin-top: 60px; }
 
 .ticket {
-  padding: 80px 25px 120px 25px;
+  padding: 80px 25px 80px 25px;
   background: #098ed8;
   text-align: center; }
   .ticket h3 {
