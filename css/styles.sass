@@ -100,6 +100,8 @@ a
     .title
       img
         margin-bottom: -20px
+        width: 100%
+        max-width: 572px
       font-size: 20px
       padding-bottom: 10px
       +breakpoint(sm)
@@ -246,7 +248,7 @@ a
     +breakpoint(sm)
       padding: 25px 50px 80px 50px
 
-      
+
 #sponsors
   padding: 80px 25px
   +breakpoint(sm)
@@ -267,19 +269,33 @@ a
     margin: 0
   .note
     margin: 0
-  .price
-    padding: 40px 0 20px
-    .discount
-      text-decoration: line-through
-      line-height: 0.7
-      font-weight: 800
-    .actual
-      font-size: 40px
-      font-weight: 800
-      span
-        font-weight: 200
-        font-size: 20px
-        padding-left: 10px
+
+  .ticket-group
+    display: flex
+    flex-wrap: wrap
+
+
+    .ticket-type
+      border: 1px solid white
+      flex: 0 1 100%
+      margin-right: 20px
+      padding: 20px
+      &:last-child
+        margin-right: 0
+
+    .price
+      padding: 40px 0 20px
+      .discount
+        text-decoration: line-through
+        line-height: 0.7
+        font-weight: 800
+      .actual
+        font-size: 40px
+        font-weight: 800
+        span
+          font-weight: 200
+          font-size: 20px
+          padding-left: 10px
 
 
 

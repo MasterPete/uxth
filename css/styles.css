@@ -64,7 +64,9 @@ a {
       font-size: 20px;
       padding-bottom: 10px; }
       #hero .container .title img {
-        margin-bottom: -20px; }
+        margin-bottom: -20px;
+        width: 100%;
+        max-width: 572px; }
       @media (min-width: 576px) {
         #hero .container .title {
           font-size: 30px; } }
@@ -232,16 +234,26 @@ a {
     margin: 0; }
   .ticket .note {
     margin: 0; }
-  .ticket .price {
-    padding: 40px 0 20px; }
-    .ticket .price .discount {
-      text-decoration: line-through;
-      line-height: 0.7;
-      font-weight: 800; }
-    .ticket .price .actual {
-      font-size: 40px;
-      font-weight: 800; }
-      .ticket .price .actual span {
-        font-weight: 200;
-        font-size: 20px;
-        padding-left: 10px; }
+  .ticket .ticket-group {
+    display: flex;
+    flex-wrap: wrap; }
+    .ticket .ticket-group .ticket-type {
+      border: 1px solid white;
+      flex: 0 1 100%;
+      margin-right: 20px;
+      padding: 20px; }
+      .ticket .ticket-group .ticket-type:last-child {
+        margin-right: 0; }
+    .ticket .ticket-group .price {
+      padding: 40px 0 20px; }
+      .ticket .ticket-group .price .discount {
+        text-decoration: line-through;
+        line-height: 0.7;
+        font-weight: 800; }
+      .ticket .ticket-group .price .actual {
+        font-size: 40px;
+        font-weight: 800; }
+        .ticket .ticket-group .price .actual span {
+          font-weight: 200;
+          font-size: 20px;
+          padding-left: 10px; }
