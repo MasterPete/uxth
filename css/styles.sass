@@ -64,6 +64,8 @@ a
     +breakpoint(sm)
       max-width: 300px
       margin: 0 auto
+    &:hover, &:active
+      color: white
     &.light
       background: $peacock-blue
 
@@ -263,61 +265,76 @@ a
 
 .ticket
   padding: 80px 25px 120px 25px
-  background: $light-blue
+  background: $peacock-blue
   text-align: center
   h3
     margin: 0
   .note
     margin: 0
+    font-size: 20px
 
   .ticket-group
     display: flex
     flex-wrap: wrap
-
+    padding-top: 60px
+    justify-content: space-between
+    margin: 0 auto
+    +breakpoint(sm)
+      max-width: 450px
+    +breakpoint(md)
+      max-width: 850px
 
     .ticket-type
       border: 1px solid white
       flex: 0 1 100%
-      margin-right: 20px
       padding: 20px
-      &:last-child
-        margin-right: 0
+      margin-bottom: 20px
+      +breakpoint(sm)
+        padding: 40px
+      +breakpoint(md)
+        flex: 1 0 50%
 
-    .price
-      padding: 40px 0 20px
-      .discount
-        text-decoration: line-through
-        line-height: 0.7
-        font-weight: 800
-      .actual
-        font-size: 40px
-        font-weight: 800
-        span
-          font-weight: 200
-          font-size: 20px
-          padding-left: 10px
-
-
-
-
-
-
-
-
-
-
+      .price
+        padding: 40px 0 20px
+        .discount
+          text-decoration: line-through
+          line-height: 0.7
+          font-weight: 800
+        .actual
+          font-size: 40px
+          font-weight: 800
+          span
+            font-weight: 200
+            font-size: 20px
+            padding-left: 10px
+      > a
+        background: $ultramarine
+      &.full
+        > a
+          background: $navi
 
 
 
-//html
+
+
+
+
+
+
+
+
+
+
+
+html
   +breakpoint(sm)
-    border: 1px solid pink
+    border: 2px solid pink
   +breakpoint(md)
-    border: 1px solid orange
+    border: 2px solid orange
   +breakpoint(lg)
-    border: 1px solid lightblue
+    border: 2px solid lightblue
   +breakpoint(xl)
-    border: 1px solid lightgreen
+    border: 2px solid lightgreen
 
 
 

@@ -33,6 +33,8 @@ a {
       a.button {
         max-width: 300px;
         margin: 0 auto; } }
+    a.button:hover, a.button:active {
+      color: white; }
     a.button.light {
       background: #098ed8; }
 
@@ -228,32 +230,66 @@ a {
 
 .ticket {
   padding: 80px 25px 120px 25px;
-  background: #03aaf4;
+  background: #098ed8;
   text-align: center; }
   .ticket h3 {
     margin: 0; }
   .ticket .note {
-    margin: 0; }
+    margin: 0;
+    font-size: 20px; }
   .ticket .ticket-group {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding-top: 60px;
+    justify-content: space-between;
+    margin: 0 auto; }
+    @media (min-width: 576px) {
+      .ticket .ticket-group {
+        max-width: 450px; } }
+    @media (min-width: 768px) {
+      .ticket .ticket-group {
+        max-width: 850px; } }
     .ticket .ticket-group .ticket-type {
       border: 1px solid white;
       flex: 0 1 100%;
-      margin-right: 20px;
-      padding: 20px; }
-      .ticket .ticket-group .ticket-type:last-child {
-        margin-right: 0; }
-    .ticket .ticket-group .price {
-      padding: 40px 0 20px; }
-      .ticket .ticket-group .price .discount {
-        text-decoration: line-through;
-        line-height: 0.7;
-        font-weight: 800; }
-      .ticket .ticket-group .price .actual {
-        font-size: 40px;
-        font-weight: 800; }
-        .ticket .ticket-group .price .actual span {
-          font-weight: 200;
-          font-size: 20px;
-          padding-left: 10px; }
+      padding: 20px;
+      margin-bottom: 20px; }
+      @media (min-width: 576px) {
+        .ticket .ticket-group .ticket-type {
+          padding: 40px; } }
+      @media (min-width: 768px) {
+        .ticket .ticket-group .ticket-type {
+          flex: 1 0 50%; } }
+      .ticket .ticket-group .ticket-type .price {
+        padding: 40px 0 20px; }
+        .ticket .ticket-group .ticket-type .price .discount {
+          text-decoration: line-through;
+          line-height: 0.7;
+          font-weight: 800; }
+        .ticket .ticket-group .ticket-type .price .actual {
+          font-size: 40px;
+          font-weight: 800; }
+          .ticket .ticket-group .ticket-type .price .actual span {
+            font-weight: 200;
+            font-size: 20px;
+            padding-left: 10px; }
+      .ticket .ticket-group .ticket-type > a {
+        background: #1c3182; }
+      .ticket .ticket-group .ticket-type.full > a {
+        background: #0f1d4f; }
+
+@media (min-width: 576px) {
+  html {
+    border: 2px solid pink; } }
+
+@media (min-width: 768px) {
+  html {
+    border: 2px solid orange; } }
+
+@media (min-width: 992px) {
+  html {
+    border: 2px solid lightblue; } }
+
+@media (min-width: 1200px) {
+  html {
+    border: 2px solid lightgreen; } }
