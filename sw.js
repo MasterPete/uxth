@@ -26,33 +26,33 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-a5ac433b0a19c3beb304.js"
+    "url": "webpack-runtime-e746d6e8f9eed323c4d5.js"
   },
   {
-    "url": "app-71c312377af699b10d4d.js"
+    "url": "app-773f34c2c4e53b3028e2.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-93b1f4ca6e5ac2be5315.js"
   },
   {
     "url": "index.html",
-    "revision": "0b30f5c64747e6a15c96924cbeff0c89"
+    "revision": "b982abb6384cc09099cd5ff9a2924670"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4977a1e258ef0c7c0601a5b8c11b3064"
+    "revision": "0f19f4fd1caa44f231323a4db42230eb"
   },
   {
     "url": "1.cfc4c31ee81be89c5082.css"
   },
   {
-    "url": "1-66a37b8923e562ff6ea0.js"
+    "url": "1-d18e647e5ef915fc5a66.js"
   },
   {
     "url": "component---src-pages-index-js-b651f887992ab9d63d86.js"
   },
   {
-    "url": "0-35b26176c2d5f00bc041.js"
+    "url": "0-b73e73ae78c133d177ee.js"
   },
   {
     "url": "static/d/173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -77,7 +77,7 @@ self.__precacheManifest = [
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/uxth/offline-plugin-app-shell-fallback/index.html", {
+workbox.routing.registerNavigationRoute("/offline-plugin-app-shell-fallback/index.html", {
   whitelist: [/^[^?]*([^.?]{5}|\.html)(\?.*)?$/],
   blacklist: [/\?(.+&)?no-cache=1$/],
 });
