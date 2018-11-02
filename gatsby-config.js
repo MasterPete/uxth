@@ -2,7 +2,6 @@ module.exports = {
   siteMetadata: {
     title: 'UX Thailand',
   },
-  pathPrefix: '/uxth',
   plugins: [
     'gatsby-plugin-react-helmet',
     {
