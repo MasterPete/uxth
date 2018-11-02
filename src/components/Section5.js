@@ -42,23 +42,21 @@ const Body = styled.span`
 
 const SponsorContainer = styled.div`
   margin: 0 auto;
-  width: fit-content;
+  padding: 60px 0;
 `
 const SponsorRow = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 80px auto;
-  grid-gap: 24px;
+  display: flex;
   align-items: center;
   justify-content: center;
 
   ${mq.s} {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 `
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin: 8px;
 `
 const Image = styled.img`
   max-width: 100%;
@@ -94,13 +92,27 @@ function Section5({ id }) {
         <SponsorContainer>
           <SponsorRow>
             <ImageWrapper>
-              <Image src="/images/bridqeasia.svg" alt="" />
+              <Image src="/images/sponsors/thoughtworks.svg" alt="" />
             </ImageWrapper>
             <ImageWrapper>
-              <Image src="/images/thoughtworks.svg" alt="" />
+              <Image src="/images/sponsors/bridqeasia.svg" alt="" />
             </ImageWrapper>
             <ImageWrapper>
-              <Image src="/images/sketch.svg" alt="" align="middle" />
+              <Image src="/images/sponsors/sketch.svg" alt="" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <Image src="/images/sponsors/balsamiq.png" alt="" />
+            </ImageWrapper>
+          </SponsorRow>
+          <SponsorRow>
+            <ImageWrapper>
+              <Image src="/images/sponsors/rosenfeld.svg" alt="" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <Image src="/images/sponsors/foundation.svg" alt="" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <Image src="/images/sponsors/axure.svg" alt="" />
             </ImageWrapper>
           </SponsorRow>
         </SponsorContainer>
