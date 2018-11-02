@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion'
-import Button from './Button'
+import Button, { AnchorButton } from './Button'
 import mq, { breakpoints } from '../../utils/media-query'
 
 const Section = styled.section`
@@ -107,17 +107,22 @@ function Section5({ id }) {
         <FooterWrapper>
           <Ul>
             <Li>
-              <Body>How to be apart of this UXTH Conference 2019,</Body>
+              <Body>Join us on this journey, to sponsor our vision</Body>
             </Li>
             <Li>
-              <Button stretchOn={stretchSize}>Contact us</Button>
+              <AnchorButton
+                href="mailto:uxthconf@gmail.com?subject=We want to sponsor your vision!"
+                stretchOn={stretchSize}
+              >
+                Contact us
+              </AnchorButton>
             </Li>
             <Li>
-              <Body>or getting more detail</Body>
+              <Body>or to find out more</Body>
             </Li>
             <Li>
               <Button outline stretchOn={stretchSize}>
-                Download sponsorship.pdf
+                Download Sponsorship Pack
               </Button>
             </Li>
           </Ul>

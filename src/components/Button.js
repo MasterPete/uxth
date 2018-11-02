@@ -1,3 +1,4 @@
+import React from 'react'
 import styled, { css } from 'react-emotion'
 
 const PrimaryStyle = css`
@@ -8,10 +9,12 @@ const PrimaryStyle = css`
   text-transform: uppercase;
 
   &:hover {
+    color: #fff;
     background: var(--color_blue_hover);
     border-color: var(--color_blue_hover);
   }
   &:active {
+    color: #fff;
     background: var(--color_blue_active);
     border-color: var(--color_blue_active);
   }
@@ -59,4 +62,16 @@ const Button = styled.button`
   ${ButtonStyle};
 `
 
+const StyledAnchor = styled.a`
+  ${ButtonStyle};
+`
+function AnchorButton({ children, ...props }) {
+  return (
+    <StyledAnchor role="button" {...props}>
+      {children}
+    </StyledAnchor>
+  )
+}
+
 export default Button
+export { AnchorButton }

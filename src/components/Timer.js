@@ -1,7 +1,12 @@
 import React from 'react'
 
+const calculateTimeLeft = dateStr => Math.round((new Date(dateStr).getTime() - new Date().getTime()) / 1000)
+
 class Timer extends React.Component {
-  state = { timeLeft: 604800, finish: false }
+  state = {
+    timeLeft: calculateTimeLeft(this.props.until),
+    finish: false,
+  }
 
   componentDidMount() {
     const interval = setInterval(() => {
@@ -43,6 +48,9 @@ class Timer extends React.Component {
       finish,
     })
   }
+}
+Timer.defaultProps = {
+  until: '2019-01-01T23:59:59+07:00',
 }
 
 export default Timer

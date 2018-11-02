@@ -43,10 +43,10 @@ const RowWrapper = styled.div`
   }
 `
 
-function FancyTimer() {
+function FancyTimer(props) {
   return (
     <Container>
-      <Timer>
+      <Timer {...props}>
         {({
           day, hour, min, sec,
         }) => (

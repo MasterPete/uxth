@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'react-emotion'
 import FancyTimer from './FancyTimer'
-import PriceCard from './PriceCard'
+import PriceCard, { PremiumPriceCard } from './PriceCard'
 import mq from '../../utils/media-query'
 
 const Section = styled.section`
@@ -63,8 +63,8 @@ function Price({ id }) {
           <Title>
             Join us at <strong>The UX Thailand Conference</strong>
           </Title>
-          <Label>Get 33% off. Early bird tickets ends 1st November 2018</Label>
-          <FancyTimer />
+          <Label>Get 33% off. Early bird tickets ends January 1st 2019</Label>
+          <FancyTimer until="2019-01-01T23:59:59+07:00" />
         </TitleWrapper>
         <CardWrapper>
           <PriceCard
@@ -81,7 +81,7 @@ function Price({ id }) {
             originPrice="11,950"
             promoPrice="8,950"
           />
-          <PriceCard
+          <PremiumPriceCard
             head="Day 3"
             title="FULL EXPERIENCE"
             subtitle="Both Conference Day 1 & Workshop Day 2"

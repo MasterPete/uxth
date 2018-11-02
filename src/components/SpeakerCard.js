@@ -111,9 +111,7 @@ function SpeakerCard({ speaker }) {
         <SpeakerDetailWrapper>
           <Title>{speaker.title}</Title>
           <Name>{speaker.name}</Name>
-          <Detail>
-            {speaker.detail} <span>Get to know more</span>
-          </Detail>
+          <Detail>{speaker.detail}</Detail>
         </SpeakerDetailWrapper>
       </SpeakerWrapper>
     </SpeakerContentBox>

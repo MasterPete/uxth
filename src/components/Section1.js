@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion'
-import Button from './Button'
+import Button, { AnchorButton } from './Button'
 import mq, { breakpoints } from '../../utils/media-query'
 
 const Section = styled.section`
@@ -49,12 +49,16 @@ function Section1({ id }) {
     <Section id={id}>
       <Container>
         <HeroSectionTextWrapper>
-          <HeroText>
-            A two-day conference for people who build world-class products.
-          </HeroText>
+          <HeroText>A two-day conference for people who build world-class products.</HeroText>
           <BodyHightlight>23-24 February, 2019</BodyHightlight>
           <Body>Central Bangkok, Thailand</Body>
-          <Button stretchOn={`${breakpoints.s}px`}>buy ticket</Button>
+          <AnchorButton
+            href="https://book.uxth.co/conf2019/register"
+            target="_blank"
+            stretchOn={`${breakpoints.s}px`}
+          >
+            buy ticket
+          </AnchorButton>
         </HeroSectionTextWrapper>
       </Container>
     </Section>

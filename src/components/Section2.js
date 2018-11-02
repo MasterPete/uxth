@@ -64,18 +64,19 @@ function Section2({ id }) {
       <Container>
         <QuoteWrapper>
           <Quote>
-            “Let us take a seat for a couple of days on the shoulders of giants
-            together.”
+            “Let us take a seat for a couple of days on the shoulders of giants together.”
           </Quote>
           <QuoteName>— by refering to the quote to Sir Isaac Newton</QuoteName>
         </QuoteWrapper>
         <TextWrapper>
           <BodyText>
-            <strong>The UX Thailand Conference</strong> is a two-day conference
-            made up of thought-provoking presentations, practical workshops and
-            engaging panel discussions. We’re bringing Giants from across the
-            world who’ve pioneered the design and product industry. Be aware!
-            there’re full of intense inspiring and upskill.
+            Two-days of presentations and workshops that promise to inspire and upskill you;
+            delivered by giants from across the world who’ve pioneered the design and product
+            industry.{' '}
+            <strong>
+              You’ll leave The UX Thailand Conference a better designer and/or product person than
+              before.
+            </strong>
           </BodyText>
         </TextWrapper>
         <Button outline stretchOn={`${breakpoints.s}px`}>

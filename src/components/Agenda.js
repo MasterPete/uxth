@@ -21,10 +21,10 @@ const speaker = {
   },
   john: {
     time: '13:00 - 14:00',
-    title: 'Topic is mockup now',
+    title: 'Continuous Design',
     name: 'JOHN CUTLER',
     detail:
-      'is Product Development Coach who is keenly focused on user experience and evidence-driven product development.',
+      'John is currently working as a product evangelist at Amplitude who is keenly focused on user experience and evidence-driven product development.',
     image: '/images/spk_JohnCutler.svg',
   },
   melissa: {
@@ -79,12 +79,11 @@ function Section8({ id }) {
     <Section id={id}>
       <Wrapper>
         <TitleWrapper>
-          <Title>AGENDA</Title>
+          <Title>Presentations & Workshops</Title>
         </TitleWrapper>
         <Layout>
           <SpeakerCard speaker={speaker.jared} />
           <SpeakerCard speaker={speaker.dana} />
-          <LunchBreak />
           <SpeakerCard speaker={speaker.john} />
           <SpeakerCard speaker={speaker.melissa} />
           <SpeakerCard speaker={speaker.liam} />

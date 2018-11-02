@@ -17,13 +17,15 @@ const CardTitle = styled.h4`
   font-style: italic;
   color: var(--color_blue);
   text-shadow: 0 4px 4px rgba(15, 29, 79, 0.25);
+  line-height: 1.25;
+  margin-bottom: 8px;
 `
 const CardSubtitle = styled.span`
   font-size: 1.25em;
   font-weight: 300;
   font-style: italic;
   color: #484848;
-  blue {
+  span {
     color: var(--color_blue);
   }
 `
@@ -48,7 +50,8 @@ const CardPrice = styled.p`
     font-weight: 300;
   }
 `
-const BuyTicket = styled.div`
+const BuyTicket = styled.a`
+  cursor: pointer;
   color: var(--color_blue);
   font-size: 20px;
   font-weight: 300;
@@ -79,6 +82,13 @@ const Card = styled.div`
   ${mq.s} {
     font-size: 10px;
   }
+
+  @media (max-width: 1100px) {
+    ${props => props.specialTopPadding
+      && `
+      padding-top: ${props.specialTopPadding}px;
+      `};
+  }
 `
 const CardBody = styled.div`
   background: #fff;
@@ -89,6 +99,7 @@ const CardBody = styled.div`
   justify-content: flex-end;
 `
 const CardHeader = styled.div`
+  position: relative;
   background: #fff;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -112,10 +123,44 @@ function PriceCard({
         </CardPrice>
       </CardBody>
       <CardFooter>
-        <BuyTicket>Buy Ticket</BuyTicket>
+        <BuyTicket href="https://book.uxth.co/conf2019/register" target="_blank">
+          Buy Ticket
+        </BuyTicket>
+      </CardFooter>
+    </Card>
+  )
+}
+
+const HatImage = styled.img`
+  position: absolute;
+  top: -80px;
+  left: calc(50% - 75px);
+`
+function PremiumPriceCard({
+  head, title, subtitle, originPrice, promoPrice,
+}) {
+  return (
+    <Card specialTopPadding={64}>
+      <CardHeader>
+        <HatImage src="/images/hat.svg" alt="" />
+        <CardHead>{head}</CardHead>
+        <CardTitle>{title}</CardTitle>
+        <CardSubtitle>{subtitle}</CardSubtitle>
+      </CardHeader>
+      <CardBody>
+        <CardPriceDiscount>{originPrice}</CardPriceDiscount>
+        <CardPrice>
+          {promoPrice} <small>THB</small>
+        </CardPrice>
+      </CardBody>
+      <CardFooter>
+        <BuyTicket href="https://book.uxth.co/conf2019/register" target="_blank">
+          Buy Ticket
+        </BuyTicket>
       </CardFooter>
     </Card>
   )
 }
 
 export default PriceCard
+export { PremiumPriceCard }
