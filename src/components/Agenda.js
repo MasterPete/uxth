@@ -9,7 +9,7 @@ const speaker = {
     name: 'JARED SPOOL',
     detail:
       'is a Maker of Awesomeness at Center Centre/UIE and one of the leading experts in user experience.',
-    image: '/images/spk_JaredSpool.svg',
+    image: '/images/speakers/spk_JaredSpool.svg',
   },
   dana: {
     time: '11:00 - 12:00',
@@ -17,7 +17,7 @@ const speaker = {
     name: 'DANA CHISNELL',
     detail:
       'is the Co-Founder of the Center for Civic Design and founding team member of President Obama’s US Digital Service.',
-    image: '/images/spk_DanaChisnell.svg',
+    image: '/images/speakers/spk_DanaChisnell.svg',
   },
   john: {
     time: '13:00 - 14:00',
@@ -25,7 +25,7 @@ const speaker = {
     name: 'JOHN CUTLER',
     detail:
       'John is currently working as a product evangelist at Amplitude who is keenly focused on user experience and evidence-driven product development.',
-    image: '/images/spk_JohnCutler.svg',
+    image: '/images/speakers/spk_JohnCutler.svg',
   },
   melissa: {
     time: '14:00 - 15:00',
@@ -33,7 +33,7 @@ const speaker = {
     name: 'MELISSA PERRI',
     detail:
       'is the CEO of Produx Labs; helping organisations become product-led. Melissa is currently writing a book about her experiences for O’Reilly.',
-    image: '/images/spk_MelissaPerri.svg',
+    image: '/images/speakers/spk_MelissaPerri.svg',
   },
   liam: {
     time: '15:00 - 16:00',
@@ -41,7 +41,7 @@ const speaker = {
     name: 'LIAM HUTCHINSON',
     detail:
       'is an Experience Design Consultant for ThoughtWorks where he helps organisations think more strategically about design.',
-    image: '/images/spk_LiamHutchinson.svg',
+    image: '/images/speakers/spk_LiamHutchinson.svg',
   },
 }
 

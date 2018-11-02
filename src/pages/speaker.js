@@ -170,53 +170,49 @@ const Speaker = () => (
     <Page>
       <SpeakerSection>
         <SpeakerWrapper>
-          <Image src="images/spk_JaredSpool@3x.png" />
+          <Image src="images/speakers/spk_JaredSpool@3x.png" />
           <DetailWrapper>
             <FirstNameTitle>JARED</FirstNameTitle>
             <LastNameTitle>SPOOL</LastNameTitle>
             <Subtitle>
-              is a Maker of Awesomeness at Center Centre/UIE and one of the
-              leading experts in user experience.
+              is a Maker of Awesomeness at Center Centre/UIE and one of the leading experts in user
+              experience.
             </Subtitle>
             <DateTime>23 February 2018, 9:00 - 10:30</DateTime>
             <Topic>“The Evolution of a New UX Design Resolution”</Topic>
             <Content>
-              Design works on many levels. We can zoom in to the screen level,
-              looking directly at what in the interactions on a single screen or
-              page. We can zoom out a little to look at an entire application’s
-              design, understanding how screens work together. Or we can pull
-              back to an organization level, working to connect applications and
-              other services together.
+              Design works on many levels. We can zoom in to the screen level, looking directly at
+              what in the interactions on a single screen or page. We can zoom out a little to look
+              at an entire application’s design, understanding how screens work together. Or we can
+              pull back to an organization level, working to connect applications and other services
+              together.
               <br />
               <br />
-              Looking at design through different levels of resolution helps us
-              answer some important questions. Is there a difference between UX
-              and UI, and if so, how does that change how teams should operate?
-              What is the relationship between product design and service
-              design? How do we start preparing for what comes next?
+              Looking at design through different levels of resolution helps us answer some
+              important questions. Is there a difference between UX and UI, and if so, how does that
+              change how teams should operate? What is the relationship between product design and
+              service design? How do we start preparing for what comes next?
               <br />
               <br />
-              In this entertaining talk, Jared explores the relationships
-              between these new levels of resolution. He’ll introduce you to a
-              level of design beyond the organization level and you how we’ll
-              need to start designing beyond organizational boundaries, and what
-              that implies. He’ll introduce you to the pioneers of this new
-              design area, and explain the process by which designers everywhere
-              will need to develop their expertise.
+              In this entertaining talk, Jared explores the relationships between these new levels
+              of resolution. He’ll introduce you to a level of design beyond the organization level
+              and you how we’ll need to start designing beyond organizational boundaries, and what
+              that implies. He’ll introduce you to the pioneers of this new design area, and explain
+              the process by which designers everywhere will need to develop their expertise.
             </Content>
             <BlueContent>Jared will show you:</BlueContent>
             <ListWrapper>
               <ListItem>
-                Where designers fall into the dangerous trap of thinking too
-                narrowly about their career
+                Where designers fall into the dangerous trap of thinking too narrowly about their
+                career
               </ListItem>
               <ListItem>
-                How there’s still a frontier of unsolved issues that pioneering
-                designers need to explore
+                How there’s still a frontier of unsolved issues that pioneering designers need to
+                explore
               </ListItem>
               <ListItem>
-                What the relationship between pioneers, settlers, and town
-                planners are, when it comes to design craft
+                What the relationship between pioneers, settlers, and town planners are, when it
+                comes to design craft
               </ListItem>
             </ListWrapper>
           </DetailWrapper>
@@ -225,11 +221,11 @@ const Speaker = () => (
           <ChangePageTitle>Want to know more... ?</ChangePageTitle>
           <NameImageWrapper>
             <ImageWrapper>
-              <NameImageLeft src="images/spk_LiamHutchinson@3x.png" />
+              <NameImageLeft src="images/speakers/spk_LiamHutchinson@3x.png" />
               <NameTextLeft> LIAM HUTCHINSON </NameTextLeft>
             </ImageWrapper>
             <ImageWrapper>
-              <NameImageRight src="images/spk_DanaChisnell@3x.png" />
+              <NameImageRight src="images/speakers/spk_DanaChisnell@3x.png" />
               <NameTextRight> DANA CHISNELL </NameTextRight>
             </ImageWrapper>
           </NameImageWrapper>

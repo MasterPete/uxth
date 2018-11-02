@@ -101,6 +101,12 @@ function LunchBreak() {
     </SpeakerContentBox>
   )
 }
+const WorkshopText = styled(BreakText)`
+  justify-content: center;
+`
+function WorkshopLine() {
+  return <WorkshopText>Workshop on Day 2</WorkshopText>
+}
 
 function SpeakerCard({ speaker }) {
   return (
@@ -117,6 +123,18 @@ function SpeakerCard({ speaker }) {
     </SpeakerContentBox>
   )
 }
+function SpeakerCardWithoutTime({ speaker }) {
+  return (
+    <SpeakerWrapper>
+      <SpeakerImage src={speaker.image} alt="" />
+      <SpeakerDetailWrapper>
+        <Title>{speaker.title}</Title>
+        <Name>{speaker.name}</Name>
+        <Detail>{speaker.detail}</Detail>
+      </SpeakerDetailWrapper>
+    </SpeakerWrapper>
+  )
+}
 
 export default SpeakerCard
-export { LunchBreak }
+export { LunchBreak, SpeakerCardWithoutTime, WorkshopLine }

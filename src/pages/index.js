@@ -7,7 +7,7 @@ import Section3 from '../components/Section3'
 import Section4 from '../components/Section4'
 import Section5 from '../components/Section5'
 import Section6 from '../components/Section6'
-import Agenda from '../components/Agenda'
+import Presentations from '../components/Presentations'
 import Price from '../components/Price'
 import Foot from '../components/Foot'
 
@@ -19,7 +19,7 @@ const IndexPage = () => (
     <Section4 id="vision" />
     <Section5 id="sponsor" />
     <Section6 id="section6" />
-    <Agenda id="speakers" />
+    <Presentations id="speakers" />
     <Price id="ticket" />
     <Foot />
   </Layout>
