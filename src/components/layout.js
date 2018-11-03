@@ -22,14 +22,11 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'UX Thailand Conference' },
+            { name: 'keywords', content: 'uxth, ux thailand' },
           ]}
         >
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <html lang="en" />
         </Helmet>
         <Navbar />
