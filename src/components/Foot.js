@@ -27,6 +27,9 @@ const PoweredBy = styled.p`
   font-weight: 300;
   color: var(--color_grey_super_light);
   align-self: center;
+  ${mq.s} {
+    margin-top: 20px;
+  }
 `
 
 const LogoWrapper = styled.div`

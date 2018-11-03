@@ -25,11 +25,18 @@ const SpeakerSection = styled.section`
 const Image = styled.img`
   width: 610px;
   height: 610px;
+  ${mq.s}{
+    width: 280px;
+    height: 280px;
+  }
 `
 
 const SpeakerWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  ${mq.s} {
+    flex-direction: column;
+  }
 `
 
 const DetailWrapper = styled.div`
@@ -37,6 +44,9 @@ const DetailWrapper = styled.div`
   flex-direction: column;
   position: relative;
   padding-left: 65px;
+  ${mq.s}{
+    padding-left: 0px;
+  }
 `
 
 const FirstNameTitle = styled.h1`
@@ -45,9 +55,12 @@ const FirstNameTitle = styled.h1`
   font-style: italic;
   line-height: 1.1;
   color: var(--color_blue);
+  ${mq.s}{
+    font-size: 40px;
+  }
 `
 const LastNameTitle = styled(FirstNameTitle)`
-  padding-left: 40px;
+  padding-left: 25px;
 `
 
 const Subtitle = styled.h2`
@@ -57,6 +70,17 @@ const Subtitle = styled.h2`
   color: var(--color_grey_super_light);
   width: 570px;
   margin-top: 20px;
+  ${mq.s} {
+    margin-top: 5px;
+    font-size: 16px;
+    width: 100%;
+    word-wrap: break-word;
+    font-weight: 300;
+    font-style: normal;
+    bold {
+      font-weight: 600;
+    }
+  }
 `
 
 const DateTime = styled.p`
@@ -115,6 +139,9 @@ const ChangePageTitle = styled.h2`
   font-style: italic;
   color: var(--color_blue);
   text-align: center;
+  ${mq.s}{
+    font-size: 32px;
+  }
 `
 
 const NameImageWrapper = styled.div`
@@ -122,6 +149,10 @@ const NameImageWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   margin-top: 40px;
+  ${mq.s} {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const NameText = styled.div`
@@ -133,6 +164,10 @@ const NameText = styled.div`
   position: absolute;
   line-height: 1.1;
   text-shadow: 0 4px 4px rgba(15, 29, 79, 0.25);
+  ${mq.s}{
+    font-size: 32px;
+    width: 150px;
+  }
 `
 
 const NameTextLeft = styled(NameText)`
@@ -151,18 +186,39 @@ const NameImageLeft = styled.img`
   width: 640px;
   height: 365px;
   margin-right: 20px;
+  ${mq.s} {
+    width: 280px;
+    height: 160px;
+    margin-left: 0px;
+  }
 `
 
 const NameImageRight = styled.img`
   width: 640px;
   height: 365px;
   margin-left: 20px;
+  ${mq.s} {
+    width: 280px;
+    height: 160px;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
 `
 
 const ImageWrapper = styled.div`
   width: 640px;
   height: 365px;
   position: relative;
+  ${mq.s} {
+    width: 280px;
+    height: 160px;
+  }
+`
+
+const MobileFullNameWrapper = styled.div`
+  ${mq.s} {
+    position: relative;
+  }
 `
 
 const Speaker = () => (
@@ -172,47 +228,53 @@ const Speaker = () => (
         <SpeakerWrapper>
           <Image src="images/speakers/spk_JaredSpool@3x.png" />
           <DetailWrapper>
-            <FirstNameTitle>JARED</FirstNameTitle>
-            <LastNameTitle>SPOOL</LastNameTitle>
+            <MobileFullNameWrapper>
+              <FirstNameTitle>JARED</FirstNameTitle>
+              <LastNameTitle>SPOOL</LastNameTitle>
+            </MobileFullNameWrapper>
             <Subtitle>
-              is a Maker of Awesomeness at Center Centre/UIE and one of the leading experts in user
-              experience.
+              is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the
+              leading experts in user experience.
             </Subtitle>
             <DateTime>23 February 2018, 9:00 - 10:30</DateTime>
             <Topic>“The Evolution of a New UX Design Resolution”</Topic>
             <Content>
-              Design works on many levels. We can zoom in to the screen level, looking directly at
-              what in the interactions on a single screen or page. We can zoom out a little to look
-              at an entire application’s design, understanding how screens work together. Or we can
-              pull back to an organization level, working to connect applications and other services
-              together.
+              Design works on many levels. We can zoom in to the screen level,
+              looking directly at what in the interactions on a single screen or
+              page. We can zoom out a little to look at an entire application’s
+              design, understanding how screens work together. Or we can pull
+              back to an organization level, working to connect applications and
+              other services together.
               <br />
               <br />
-              Looking at design through different levels of resolution helps us answer some
-              important questions. Is there a difference between UX and UI, and if so, how does that
-              change how teams should operate? What is the relationship between product design and
-              service design? How do we start preparing for what comes next?
+              Looking at design through different levels of resolution helps us
+              answer some important questions. Is there a difference between UX
+              and UI, and if so, how does that change how teams should operate?
+              What is the relationship between product design and service
+              design? How do we start preparing for what comes next?
               <br />
               <br />
-              In this entertaining talk, Jared explores the relationships between these new levels
-              of resolution. He’ll introduce you to a level of design beyond the organization level
-              and you how we’ll need to start designing beyond organizational boundaries, and what
-              that implies. He’ll introduce you to the pioneers of this new design area, and explain
-              the process by which designers everywhere will need to develop their expertise.
+              In this entertaining talk, Jared explores the relationships
+              between these new levels of resolution. He’ll introduce you to a
+              level of design beyond the organization level and you how we’ll
+              need to start designing beyond organizational boundaries, and what
+              that implies. He’ll introduce you to the pioneers of this new
+              design area, and explain the process by which designers everywhere
+              will need to develop their expertise.
             </Content>
             <BlueContent>Jared will show you:</BlueContent>
             <ListWrapper>
               <ListItem>
-                Where designers fall into the dangerous trap of thinking too narrowly about their
-                career
+                Where designers fall into the dangerous trap of thinking too
+                narrowly about their career
               </ListItem>
               <ListItem>
-                How there’s still a frontier of unsolved issues that pioneering designers need to
-                explore
+                How there’s still a frontier of unsolved issues that pioneering
+                designers need to explore
               </ListItem>
               <ListItem>
-                What the relationship between pioneers, settlers, and town planners are, when it
-                comes to design craft
+                What the relationship between pioneers, settlers, and town
+                planners are, when it comes to design craft
               </ListItem>
             </ListWrapper>
           </DetailWrapper>
