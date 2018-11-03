@@ -133,9 +133,14 @@ function Section5({ id }) {
               <Body>or to find out more</Body>
             </Li>
             <Li>
-              <Button outline stretchOn={stretchSize}>
+              <AnchorButton
+                href="/files/UXTH_Conference_2019_Sponsor_Pack_1.pdf"
+                target="_blank"
+                outline
+                stretchOn={stretchSize}
+              >
                 Download Sponsorship Pack
-              </Button>
+              </AnchorButton>
             </Li>
           </Ul>
         </FooterWrapper>
