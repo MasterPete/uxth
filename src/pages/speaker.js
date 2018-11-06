@@ -28,6 +28,7 @@ const Image = styled.img`
   ${mq.s}{
     width: 280px;
     height: 280px;
+    margin-top: 40px;
   }
 `
 
@@ -36,6 +37,7 @@ const SpeakerWrapper = styled.div`
   flex-direction: row;
   ${mq.s} {
     flex-direction: column;
+    align-items: center
   }
 `
 
@@ -221,21 +223,52 @@ const MobileFullNameWrapper = styled.div`
   }
 `
 
+const Small = styled.div`
+  @media (min-width: 992px) {
+    display: none;
+  }
+  ${mq.s} {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
+const Large = styled.div`
+  ${mq.l} {
+    display: flex;
+  }
+  ${mq.s} {
+    display: none;
+  }
+`
+
+const TitleSubtitle = () => (
+  <React.Fragment>
+    <MobileFullNameWrapper>
+      <FirstNameTitle>JARED</FirstNameTitle>
+      <LastNameTitle>SPOOL</LastNameTitle>
+    </MobileFullNameWrapper>
+    <Subtitle>
+      is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the
+      leading experts in user experience.
+    </Subtitle>
+  </React.Fragment>
+)
+
 const Speaker = () => (
   <Layout>
     <Page>
       <SpeakerSection>
         <SpeakerWrapper>
+          <Small>
+            <TitleSubtitle />
+          </Small>
           <Image src="images/speakers/spk_JaredSpool@3x.png" />
           <DetailWrapper>
-            <MobileFullNameWrapper>
-              <FirstNameTitle>JARED</FirstNameTitle>
-              <LastNameTitle>SPOOL</LastNameTitle>
-            </MobileFullNameWrapper>
-            <Subtitle>
-              is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the
-              leading experts in user experience.
-            </Subtitle>
+            <Large>
+              <TitleSubtitle />
+            </Large>
             <DateTime>23 February 2018, 9:00 - 10:30</DateTime>
             <Topic>“The Evolution of a New UX Design Resolution”</Topic>
             <Content>
