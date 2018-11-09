@@ -4,6 +4,7 @@ import mq from '../../utils/media-query'
 
 import Layout from '../components/layout'
 import Foot from '../components/Foot'
+import Tabs from '../components/Tabs'
 
 const Page = styled.div`
   background-image: linear-gradient(#000, var(--color_blur_dark));
@@ -23,22 +24,12 @@ const SpeakerSection = styled.section`
 `
 
 const Image = styled.img`
-  width: 610px;
-  height: 610px;
-  ${mq.s}{
-    width: 280px;
-    height: 280px;
-    margin-top: 40px;
-  }
+  width: 100%;
 `
 
 const SpeakerWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  ${mq.s} {
-    flex-direction: column;
-    align-items: center
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 `
 
 const DetailWrapper = styled.div`
@@ -46,7 +37,7 @@ const DetailWrapper = styled.div`
   flex-direction: column;
   position: relative;
   padding-left: 65px;
-  ${mq.s}{
+  ${mq.s} {
     padding-left: 0px;
   }
 `
@@ -57,7 +48,7 @@ const FirstNameTitle = styled.h1`
   font-style: italic;
   line-height: 1.1;
   color: var(--color_blue);
-  ${mq.s}{
+  ${mq.s} {
     font-size: 40px;
   }
 `
@@ -141,7 +132,7 @@ const ChangePageTitle = styled.h2`
   font-style: italic;
   color: var(--color_blue);
   text-align: center;
-  ${mq.s}{
+  ${mq.s} {
     font-size: 32px;
   }
 `
@@ -166,7 +157,7 @@ const NameText = styled.div`
   position: absolute;
   line-height: 1.1;
   text-shadow: 0 4px 4px rgba(15, 29, 79, 0.25);
-  ${mq.s}{
+  ${mq.s} {
     font-size: 32px;
     width: 150px;
   }
@@ -250,81 +241,156 @@ const TitleSubtitle = () => (
       <LastNameTitle>SPOOL</LastNameTitle>
     </MobileFullNameWrapper>
     <Subtitle>
-      is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the
-      leading experts in user experience.
+      is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the leading experts
+      in user experience.
     </Subtitle>
   </React.Fragment>
 )
+
+const TabText = styled.span`
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-shadow: 0 4px 4px rgba(15, 29, 79, 0.25);
+  color: var(--color_almost_white);
+`
+const ListRow = styled.ul`
+  display: flex;
+`
+const List = styled.li`
+  margin: 0 16px;
+  cursor: pointer;
+  ${props => props.active
+    && `
+    border-bottom: 1px solid #fff;
+  `};
+`
+function TabTitles({ onClick, currentIndex }) {
+  return (
+    <>
+      <ListRow>
+        <List active={currentIndex === 0}>
+          <TabText onClick={() => onClick(0)}>Talk</TabText>
+        </List>
+        <List active={currentIndex === 1}>
+          <TabText onClick={() => onClick(1)}>Workshop</TabText>
+        </List>
+        <List active={currentIndex === 2}>
+          <TabText onClick={() => onClick(2)}>Biography</TabText>
+        </List>
+      </ListRow>
+    </>
+  )
+}
+
+const talk = (
+  <>
+    <Topic>“The Evolution of a New UX Design Resolution”</Topic>
+    <Content>
+      Design works on many levels. We can zoom in to the screen level, looking directly at what in
+      the interactions on a single screen or page. We can zoom out a little to look at an entire
+      application’s design, understanding how screens work together. Or we can pull back to an
+      organization level, working to connect applications and other services together.
+      <br />
+      <br />
+      Looking at design through different levels of resolution helps us answer some important
+      questions. Is there a difference between UX and UI, and if so, how does that change how teams
+      should operate? What is the relationship between product design and service design? How do we
+      start preparing for what comes next?
+      <br />
+      <br />
+      In this entertaining talk, Jared explores the relationships between these new levels of
+      resolution. He’ll introduce you to a level of design beyond the organization level and you how
+      we’ll need to start designing beyond organizational boundaries, and what that implies. He’ll
+      introduce you to the pioneers of this new design area, and explain the process by which
+      designers everywhere will need to develop their expertise.
+    </Content>
+    <BlueContent>Jared will show you:</BlueContent>
+    <ListWrapper>
+      <ListItem>
+        Where designers fall into the dangerous trap of thinking too narrowly about their career
+      </ListItem>
+      <ListItem>
+        How there’s still a frontier of unsolved issues that pioneering designers need to explore
+      </ListItem>
+      <ListItem>
+        What the relationship between pioneers, settlers, and town planners are, when it comes to
+        design craft
+      </ListItem>
+    </ListWrapper>
+  </>
+)
+const workshop = (
+  <>
+    <Topic>Workshop</Topic>
+    <Content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cupiditate eaque quos nulla
+      nihil illum aliquid soluta deserunt, architecto id est fugiat ab non asperiores. Officia earum
+      quis doloribus. Est!
+    </Content>
+  </>
+)
+const biography = (
+  <>
+    <Topic>Biography</Topic>
+    <Content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cupiditate eaque quos nulla
+      nihil illum aliquid soluta deserunt, architecto id est fugiat ab non asperiores. Officia earum
+      quis doloribus. Est!
+    </Content>
+  </>
+)
+
+const contents = [talk, workshop, biography]
+function SpeakerContentSection() {
+  return (
+    <SpeakerWrapper>
+      {/* <Small>
+        <TitleSubtitle />
+      </Small> */}
+      <Image src="/images/speakers/spk_JaredSpool@3x.png" />
+      <DetailWrapper>
+        <Large>
+          <TitleSubtitle />
+        </Large>
+        <DateTime>23 February 2018, 9:00 - 10:30</DateTime>
+        <Tabs>
+          {({ currentIndex, changeIndex }) => (
+            <>
+              <TabTitles onClick={changeIndex} currentIndex={currentIndex} />
+              {contents[currentIndex]}
+            </>
+          )}
+        </Tabs>
+      </DetailWrapper>
+    </SpeakerWrapper>
+  )
+}
+
+function PageChangingSection() {
+  return (
+    <ChangePageSection>
+      <ChangePageTitle>Want to know more... ?</ChangePageTitle>
+      <NameImageWrapper>
+        <ImageWrapper>
+          <NameImageLeft src="/images/speakers/spk_LiamHutchinson@3x.png" />
+          <NameTextLeft> LIAM HUTCHINSON </NameTextLeft>
+        </ImageWrapper>
+        <ImageWrapper>
+          <NameImageRight src="/images/speakers/spk_DanaChisnell@3x.png" />
+          <NameTextRight> DANA CHISNELL </NameTextRight>
+        </ImageWrapper>
+      </NameImageWrapper>
+    </ChangePageSection>
+  )
+}
 
 const Speaker = () => (
   <Layout>
     <Page>
       <SpeakerSection>
-        <SpeakerWrapper>
-          <Small>
-            <TitleSubtitle />
-          </Small>
-          <Image src="images/speakers/spk_JaredSpool@3x.png" />
-          <DetailWrapper>
-            <Large>
-              <TitleSubtitle />
-            </Large>
-            <DateTime>23 February 2018, 9:00 - 10:30</DateTime>
-            <Topic>“The Evolution of a New UX Design Resolution”</Topic>
-            <Content>
-              Design works on many levels. We can zoom in to the screen level,
-              looking directly at what in the interactions on a single screen or
-              page. We can zoom out a little to look at an entire application’s
-              design, understanding how screens work together. Or we can pull
-              back to an organization level, working to connect applications and
-              other services together.
-              <br />
-              <br />
-              Looking at design through different levels of resolution helps us
-              answer some important questions. Is there a difference between UX
-              and UI, and if so, how does that change how teams should operate?
-              What is the relationship between product design and service
-              design? How do we start preparing for what comes next?
-              <br />
-              <br />
-              In this entertaining talk, Jared explores the relationships
-              between these new levels of resolution. He’ll introduce you to a
-              level of design beyond the organization level and you how we’ll
-              need to start designing beyond organizational boundaries, and what
-              that implies. He’ll introduce you to the pioneers of this new
-              design area, and explain the process by which designers everywhere
-              will need to develop their expertise.
-            </Content>
-            <BlueContent>Jared will show you:</BlueContent>
-            <ListWrapper>
-              <ListItem>
-                Where designers fall into the dangerous trap of thinking too
-                narrowly about their career
-              </ListItem>
-              <ListItem>
-                How there’s still a frontier of unsolved issues that pioneering
-                designers need to explore
-              </ListItem>
-              <ListItem>
-                What the relationship between pioneers, settlers, and town
-                planners are, when it comes to design craft
-              </ListItem>
-            </ListWrapper>
-          </DetailWrapper>
-        </SpeakerWrapper>
-        <ChangePageSection>
-          <ChangePageTitle>Want to know more... ?</ChangePageTitle>
-          <NameImageWrapper>
-            <ImageWrapper>
-              <NameImageLeft src="images/speakers/spk_LiamHutchinson@3x.png" />
-              <NameTextLeft> LIAM HUTCHINSON </NameTextLeft>
-            </ImageWrapper>
-            <ImageWrapper>
-              <NameImageRight src="images/speakers/spk_DanaChisnell@3x.png" />
-              <NameTextRight> DANA CHISNELL </NameTextRight>
-            </ImageWrapper>
-          </NameImageWrapper>
-        </ChangePageSection>
+        <SpeakerContentSection />
+        <PageChangingSection />
       </SpeakerSection>
     </Page>
     <Foot />
