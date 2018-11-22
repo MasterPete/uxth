@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import mq from '../../utils/media-query'
 
@@ -123,7 +124,7 @@ function SpeakerCardWithoutTime({ speaker }) {
       <SpeakerDetailWrapper>
         <Title>{speaker.title}</Title>
         <Name>{speaker.name}</Name>
-        <Detail>{speaker.detail} <a href={"/speaker/" + speaker.slug}>Read more</a></Detail>
+        <Detail>{speaker.detail} <Link to={"/speaker/" + speaker.slug}>Read more</Link></Detail>
       </SpeakerDetailWrapper>
     </SpeakerWrapper>
   )

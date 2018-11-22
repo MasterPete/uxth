@@ -197,10 +197,7 @@ class Navbar extends React.Component {
             <Link to="#sponsor">Sponsors</Link>
           </Li>
           <Li>
-            <Link to="#agenda">Agenda</Link>
-          </Li>
-          <Li>
-            <Link to="#speakers">Speakers</Link>
+            <Link to="#programme">Programme</Link>
           </Li>
           <Li>
             <Link to="#ticket">Ticket</Link>
