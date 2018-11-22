@@ -112,14 +112,7 @@ function SpeakerCard({ speaker }) {
   return (
     <SpeakerContentBox>
       <SpeakerTime>{speaker.time}</SpeakerTime>
-      <SpeakerWrapper>
-        <SpeakerImage src={speaker.image} alt="" />
-        <SpeakerDetailWrapper>
-          <Title>{speaker.title}</Title>
-          <Name>{speaker.name}</Name>
-          <Detail>{speaker.detail}</Detail>
-        </SpeakerDetailWrapper>
-      </SpeakerWrapper>
+      <SpeakerCardWithoutTime speaker={speaker} />
     </SpeakerContentBox>
   )
 }
@@ -130,7 +123,7 @@ function SpeakerCardWithoutTime({ speaker }) {
       <SpeakerDetailWrapper>
         <Title>{speaker.title}</Title>
         <Name>{speaker.name}</Name>
-        <Detail>{speaker.detail}</Detail>
+        <Detail>{speaker.detail} <a href={"/speaker/" + speaker.slug}>Read more</a></Detail>
       </SpeakerDetailWrapper>
     </SpeakerWrapper>
   )

@@ -76,15 +76,6 @@ const Subtitle = styled.h2`
   }
 `
 
-const DateTime = styled.p`
-  font-size: 14px;
-  font-weight: normal;
-  font-style: italic;
-  color: rgba(232, 232, 232, 0.6);
-  margin-top: 40px;
-  margin-bottom: 10px;
-`
-
 const Topic = styled.h1`
   font-size: 36px;
   font-weight: 200;
@@ -120,32 +111,6 @@ const ListItem = styled.li`
   font-style: italic;
   color: var(--color_grey_super_light);
   line-height: 2;
-`
-
-const ChangePageSection = styled.section`
-  padding-top: 100px;
-`
-
-const ChangePageTitle = styled.h2`
-  font-size: 36px;
-  font-weight: 200;
-  font-style: italic;
-  color: var(--color_blue);
-  text-align: center;
-  ${mq.s} {
-    font-size: 32px;
-  }
-`
-
-const NameImageWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 40px;
-  ${mq.s} {
-    flex-direction: column;
-    align-items: center;
-  }
 `
 
 const NameText = styled.div`
@@ -256,6 +221,7 @@ const TabText = styled.span`
 `
 const ListRow = styled.ul`
   display: flex;
+  padding: 22.5px 0;
 `
 const List = styled.li`
   margin: 0 16px;
@@ -353,7 +319,6 @@ function SpeakerContentSection() {
         <Large>
           <TitleSubtitle />
         </Large>
-        <DateTime>23 February 2018, 9:00 - 10:30</DateTime>
         <Tabs>
           {({ currentIndex, changeIndex }) => (
             <>
@@ -367,30 +332,11 @@ function SpeakerContentSection() {
   )
 }
 
-function PageChangingSection() {
-  return (
-    <ChangePageSection>
-      <ChangePageTitle>Want to know more... ?</ChangePageTitle>
-      <NameImageWrapper>
-        <ImageWrapper>
-          <NameImageLeft src="/images/speakers/spk_LiamHutchinson@3x.png" />
-          <NameTextLeft> LIAM HUTCHINSON </NameTextLeft>
-        </ImageWrapper>
-        <ImageWrapper>
-          <NameImageRight src="/images/speakers/spk_DanaChisnell@3x.png" />
-          <NameTextRight> DANA CHISNELL </NameTextRight>
-        </ImageWrapper>
-      </NameImageWrapper>
-    </ChangePageSection>
-  )
-}
-
 const Speaker = () => (
   <Layout>
     <Page>
       <SpeakerSection>
         <SpeakerContentSection />
-        <PageChangingSection />
       </SpeakerSection>
     </Page>
     <Foot />
