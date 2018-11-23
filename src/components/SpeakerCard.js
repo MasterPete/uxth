@@ -106,7 +106,7 @@ const WorkshopText = styled(BreakText)`
   justify-content: center;
 `
 function WorkshopLine() {
-  return <WorkshopText>Workshop on Day 2</WorkshopText>
+  return <WorkshopText>Full-day workshops on day 2:</WorkshopText>
 }
 
 function SpeakerCard({ speaker }) {

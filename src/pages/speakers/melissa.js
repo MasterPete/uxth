@@ -9,8 +9,7 @@ export default () => (
       lastName: 'PERRI',
       subtitle: (
         <>
-          is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the leading experts
-          in user experience.
+          is the <bold> CEO of Produx Labs </bold> and author of Escaping The Build Trap
         </>
       ),
     }}
@@ -20,50 +19,19 @@ export default () => (
         <>
           <Topic>“The Evolution of a New UX Design Resolution”</Topic>
           <Content>
-            Design works on many levels. We can zoom in to the screen level, looking directly at what in
-            the interactions on a single screen or page. We can zoom out a little to look at an entire
-            application’s design, understanding how screens work together. Or we can pull back to an
-            organization level, working to connect applications and other services together.
-            <br />
-            <br />
-            Looking at design through different levels of resolution helps us answer some important
-            questions. Is there a difference between UX and UI, and if so, how does that change how teams
-            should operate? What is the relationship between product design and service design? How do we
-            start preparing for what comes next?
-            <br />
-            <br />
-            In this entertaining talk, Jared explores the relationships between these new levels of
-            resolution. He’ll introduce you to a level of design beyond the organization level and you how
-            we’ll need to start designing beyond organizational boundaries, and what that implies. He’ll
-            introduce you to the pioneers of this new design area, and explain the process by which
-            designers everywhere will need to develop their expertise.
+            Are you building what your customers want, or are you just building? When successful companies first started out, they had to constantly deliver value to understand what their users wanted. This grew their business. Many large companies that have been around for decades, or even newer startups that have found some stability, fall into a dangerous place called “The Build Trap”. They continue building feature after feature, without stopping to validate it’s what customer truly want and need. This is due in part to poor understanding of Product Strategy, Product Management, and how to manage teams. In order to get out of “The Build Trap”, businesses need to restructure their thinking to focus on finding value for the user through experimentation to achieve business goals. 
+
           </Content>
-          <BlueContent>Jared will show you:</BlueContent>
-          <ListWrapper>
-            <ListItem>
-              Where designers fall into the dangerous trap of thinking too narrowly about their career
-            </ListItem>
-            <ListItem>
-              How there’s still a frontier of unsolved issues that pioneering designers need to explore
-            </ListItem>
-            <ListItem>
-              What the relationship between pioneers, settlers, and town planners are, when it comes to
-              design craft
-            </ListItem>
-          </ListWrapper>
+          
         </>
       ),
       biography: (
         <>
           <Topic>Biography</Topic>
           <Content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cupiditate eaque quos nulla
-            nihil illum aliquid soluta deserunt, architecto id est fugiat ab non asperiores. Officia earum
-            quis doloribus. Est!
-          </Content>
+            Melissa Perri is a Product Management CEO, teacher, and author. Melissa's day job is as the CEO of Produx Labs, a firm that helps growth stage and enterprise companies scale their product organizations. In partnership with Insight Venture, they are also training the next generation of Chief Product Officers through their CPO Accelerator program. Melissa also started the online product school Product Institute in 2016, and published Escaping the Build Trap with O'Reilly Media in 2018.          </Content>
         </>
       ),
     }}
   />
 )
-
