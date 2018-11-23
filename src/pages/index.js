@@ -19,7 +19,7 @@ const IndexPage = () => (
     <Section4 id="vision" />
     <Section5 id="sponsor" />
     <Section6 id="section6" />
-    <Presentations id="speakers" />
+    <Presentations id="programme" />
     <Price id="ticket" />
     <Foot />
   </Layout>

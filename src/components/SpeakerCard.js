@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import mq from '../../utils/media-query'
 
@@ -105,21 +106,14 @@ const WorkshopText = styled(BreakText)`
   justify-content: center;
 `
 function WorkshopLine() {
-  return <WorkshopText>Workshop on Day 2</WorkshopText>
+  return <WorkshopText>Full-day workshops on day 2:</WorkshopText>
 }
 
 function SpeakerCard({ speaker }) {
   return (
     <SpeakerContentBox>
       <SpeakerTime>{speaker.time}</SpeakerTime>
-      <SpeakerWrapper>
-        <SpeakerImage src={speaker.image} alt="" />
-        <SpeakerDetailWrapper>
-          <Title>{speaker.title}</Title>
-          <Name>{speaker.name}</Name>
-          <Detail>{speaker.detail}</Detail>
-        </SpeakerDetailWrapper>
-      </SpeakerWrapper>
+      <SpeakerCardWithoutTime speaker={speaker} />
     </SpeakerContentBox>
   )
 }
@@ -130,7 +124,15 @@ function SpeakerCardWithoutTime({ speaker }) {
       <SpeakerDetailWrapper>
         <Title>{speaker.title}</Title>
         <Name>{speaker.name}</Name>
-        <Detail>{speaker.detail}</Detail>
+        <Detail>{speaker.detail} {
+          (() =>
+            speaker.link === undefined ? 
+              <Link to={"/speakers/" + speaker.slug}>Read more</Link> :
+                speaker.link === 'NO_LINK' ? '' :
+                  <a href={speaker.link.location} target="_blank">{speaker.link.text}</a>
+          )()
+        }
+        </Detail>
       </SpeakerDetailWrapper>
     </SpeakerWrapper>
   )

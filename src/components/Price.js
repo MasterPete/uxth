@@ -55,6 +55,15 @@ const TitleWrapper = styled.div`
   }
 `
 
+const BulkTicket = styled.div`
+  display: flex;
+  justify-content: center;
+  a {
+    color: var(--color_blue_light);
+    text-decoration: underline;
+  }
+`
+
 function Price({ id }) {
   return (
     <Section id={id}>
@@ -89,6 +98,11 @@ function Price({ id }) {
             promoPrice="9,950"
           />
         </CardWrapper>
+        <BulkTicket>
+          <Label>
+            For bulk tickets or questions, contact us on <a href="tel:+66872223380">087 222 3380</a> or <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
+          </Label>
+        </BulkTicket>
       </Wrapper>
     </Section>
   )

@@ -79,9 +79,11 @@ function Section2({ id }) {
             </strong>
           </BodyText>
         </TextWrapper>
-        <Button outline stretchOn={`${breakpoints.s}px`}>
-          See last year’s highlights
-        </Button>
+        <a href="https://medium.com/@apirak/behind-the-scene-of-ux-thailand-999f876a58ba" target="_blank">
+          <Button outline stretchOn={`${breakpoints.s}px`}>
+            See last year’s highlights
+          </Button>
+        </a>
       </Container>
     </Section>
   )

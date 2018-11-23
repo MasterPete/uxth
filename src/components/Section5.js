@@ -98,6 +98,9 @@ function Section5({ id }) {
               <Image src="/images/sponsors/bridqeasia.svg" alt="" />
             </ImageWrapper>
             <ImageWrapper>
+              <Image src="/images/sponsors/ntl.svg" alt="" />
+            </ImageWrapper>
+            <ImageWrapper>
               <Image src="/images/sponsors/sketch.svg" alt="" />
             </ImageWrapper>
             <ImageWrapper>
