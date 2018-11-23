@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'react-emotion'
 import mq from '../../utils/media-query'
 
-import Layout from '../components/layout'
-import Foot from '../components/Foot'
-import Tabs from '../components/Tabs'
+import Layout from './layout'
+import Foot from './Foot'
+import Tabs from './Tabs'
 
 const Page = styled.div`
   background-image: linear-gradient(#000, var(--color_blur_dark));
@@ -76,7 +76,7 @@ const Subtitle = styled.h2`
   }
 `
 
-const Topic = styled.h1`
+export const Topic = styled.h1`
   font-size: 36px;
   font-weight: 200;
   font-style: italic;
@@ -85,7 +85,7 @@ const Topic = styled.h1`
   margin-bottom: 40px;
 `
 
-const Content = styled.p`
+export const Content = styled.p`
   font-size: 14px;
   font-weight: 300;
   font-style: italic;
@@ -93,19 +93,19 @@ const Content = styled.p`
   margin-bottom: 20px;
 `
 
-const BlueContent = styled.p`
+export const BlueContent = styled.p`
   font-size: 16px;
   font-weight: 300;
   color: var(--color_blue);
   margin-bottom: 10px;
 `
 
-const ListWrapper = styled.ul`
+export const ListWrapper = styled.ul`
   list-style: circle outside none;
   padding-left: 20px;
 `
 
-const ListItem = styled.li`
+export const ListItem = styled.li`
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
@@ -199,19 +199,6 @@ const Large = styled.div`
   }
 `
 
-const TitleSubtitle = () => (
-  <React.Fragment>
-    <MobileFullNameWrapper>
-      <FirstNameTitle>JARED</FirstNameTitle>
-      <LastNameTitle>SPOOL</LastNameTitle>
-    </MobileFullNameWrapper>
-    <Subtitle>
-      is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the leading experts
-      in user experience.
-    </Subtitle>
-  </React.Fragment>
-)
-
 const TabText = styled.span`
   font-size: 20px;
   font-weight: 300;
@@ -249,98 +236,36 @@ function TabTitles({ onClick, currentIndex }) {
   )
 }
 
-const talk = (
-  <>
-    <Topic>“The Evolution of a New UX Design Resolution”</Topic>
-    <Content>
-      Design works on many levels. We can zoom in to the screen level, looking directly at what in
-      the interactions on a single screen or page. We can zoom out a little to look at an entire
-      application’s design, understanding how screens work together. Or we can pull back to an
-      organization level, working to connect applications and other services together.
-      <br />
-      <br />
-      Looking at design through different levels of resolution helps us answer some important
-      questions. Is there a difference between UX and UI, and if so, how does that change how teams
-      should operate? What is the relationship between product design and service design? How do we
-      start preparing for what comes next?
-      <br />
-      <br />
-      In this entertaining talk, Jared explores the relationships between these new levels of
-      resolution. He’ll introduce you to a level of design beyond the organization level and you how
-      we’ll need to start designing beyond organizational boundaries, and what that implies. He’ll
-      introduce you to the pioneers of this new design area, and explain the process by which
-      designers everywhere will need to develop their expertise.
-    </Content>
-    <BlueContent>Jared will show you:</BlueContent>
-    <ListWrapper>
-      <ListItem>
-        Where designers fall into the dangerous trap of thinking too narrowly about their career
-      </ListItem>
-      <ListItem>
-        How there’s still a frontier of unsolved issues that pioneering designers need to explore
-      </ListItem>
-      <ListItem>
-        What the relationship between pioneers, settlers, and town planners are, when it comes to
-        design craft
-      </ListItem>
-    </ListWrapper>
-  </>
-)
-const workshop = (
-  <>
-    <Topic>Workshop</Topic>
-    <Content>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cupiditate eaque quos nulla
-      nihil illum aliquid soluta deserunt, architecto id est fugiat ab non asperiores. Officia earum
-      quis doloribus. Est!
-    </Content>
-  </>
-)
-const biography = (
-  <>
-    <Topic>Biography</Topic>
-    <Content>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cupiditate eaque quos nulla
-      nihil illum aliquid soluta deserunt, architecto id est fugiat ab non asperiores. Officia earum
-      quis doloribus. Est!
-    </Content>
-  </>
-)
-
-const contents = [talk, workshop, biography]
-function SpeakerContentSection() {
-  return (
-    <SpeakerWrapper>
-      {/* <Small>
-        <TitleSubtitle />
-      </Small> */}
-      <Image src="/images/speakers/spk_JaredSpool@3x.png" />
-      <DetailWrapper>
-        <Large>
-          <TitleSubtitle />
-        </Large>
-        <Tabs>
-          {({ currentIndex, changeIndex }) => (
-            <>
-              <TabTitles onClick={changeIndex} currentIndex={currentIndex} />
-              {contents[currentIndex]}
-            </>
-          )}
-        </Tabs>
-      </DetailWrapper>
-    </SpeakerWrapper>
-  )
-}
-
-const Speaker = () => (
+const SpeakerPage = ({ header, imagePath, contents }) => (
   <Layout>
     <Page>
       <SpeakerSection>
-        <SpeakerContentSection />
+        <SpeakerWrapper>
+          <Image src={imagePath} />
+          <DetailWrapper>
+            <Large>
+              <MobileFullNameWrapper>
+                <FirstNameTitle>{header.firstName}</FirstNameTitle>
+                <LastNameTitle>{header.lastName}</LastNameTitle>
+              </MobileFullNameWrapper>
+              <Subtitle>
+                {header.subtitle}
+              </Subtitle>
+            </Large>
+            <Tabs>
+              {({ currentIndex, changeIndex }) => (
+                <>
+                  <TabTitles onClick={changeIndex} currentIndex={currentIndex} />
+                  {contents[currentIndex]}
+                </>
+              )}
+            </Tabs>
+          </DetailWrapper>
+        </SpeakerWrapper>
       </SpeakerSection>
     </Page>
     <Foot />
   </Layout>
 )
 
-export default Speaker
+export default SpeakerPage
