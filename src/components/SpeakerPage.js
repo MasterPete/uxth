@@ -218,20 +218,9 @@ const List = styled.li`
     border-bottom: 1px solid #fff;
   `};
 `
-function TabTitles({ onClick, currentIndex }) {
+function TabTitles({ onClick, currentTab }) {
   return (
     <>
-      <ListRow>
-        <List active={currentIndex === 0}>
-          <TabText onClick={() => onClick(0)}>Talk</TabText>
-        </List>
-        <List active={currentIndex === 1}>
-          <TabText onClick={() => onClick(1)}>Workshop</TabText>
-        </List>
-        <List active={currentIndex === 2}>
-          <TabText onClick={() => onClick(2)}>Biography</TabText>
-        </List>
-      </ListRow>
     </>
   )
 }
@@ -253,10 +242,23 @@ const SpeakerPage = ({ header, imagePath, contents }) => (
               </Subtitle>
             </Large>
             <Tabs>
-              {({ currentIndex, changeIndex }) => (
+              {({ currentTab, changeTab }) => (
                 <>
-                  <TabTitles onClick={changeIndex} currentIndex={currentIndex} />
-                  {contents[currentIndex]}
+                  <ListRow>
+                    <List active={currentTab === 'talk'}>
+                      <TabText onClick={() => changeTab('talk')}>Talk</TabText>
+                    </List>
+                    {
+                      contents.workshop &&
+                        <List active={currentTab === 'workshop'}>
+                          <TabText onClick={() => changeTab('workshop')}>Workshop</TabText>
+                        </List>
+                    }
+                    <List active={currentTab === 'biography'}>
+                      <TabText onClick={() => changeTab('biography')}>Biography</TabText>
+                    </List>
+                  </ListRow>
+                  {contents[currentTab]}
                 </>
               )}
             </Tabs>

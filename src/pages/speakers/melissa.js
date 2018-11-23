@@ -5,8 +5,8 @@ import SpeakerPage from '../../components/SpeakerPage'
 export default () => (
   <SpeakerPage
     header={{
-      firstName: 'DANA',
-      lastName: 'CHISNELL',
+      firstName: 'MELISSA',
+      lastName: 'PERRI',
       subtitle: (
         <>
           is a <bold> Maker of Awesomeness at Center Centre/UIE </bold> and one of the leading experts
@@ -14,7 +14,7 @@ export default () => (
         </>
       ),
     }}
-    imagePath="/images/speakers/spk_DanaChisnell.svg"
+    imagePath="/images/speakers/spk_MelissaPerri.svg"
     contents={{
       talk: (
         <>
@@ -51,16 +51,6 @@ export default () => (
               design craft
             </ListItem>
           </ListWrapper>
-        </>
-      ),
-      workshop: (
-        <>
-          <Topic>Workshop</Topic>
-          <Content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cupiditate eaque quos nulla
-            nihil illum aliquid soluta deserunt, architecto id est fugiat ab non asperiores. Officia earum
-            quis doloribus.
-          </Content>
         </>
       ),
       biography: (

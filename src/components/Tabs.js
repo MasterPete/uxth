@@ -1,19 +1,19 @@
 import React from 'react'
 
 class Tabs extends React.Component {
-  state = { index: 0 }
+  state = { id: 'talk' }
 
-  changeIndex = (index) => {
-    this.setState({ index })
+  changeTab = (id) => {
+    this.setState({ id })
   }
 
   render() {
     const { children } = this.props
-    const { index } = this.state
+    const { id } = this.state
 
     return children({
-      currentIndex: index,
-      changeIndex: this.changeIndex,
+      currentTab: id,
+      changeTab: this.changeTab,
     })
   }
 }
