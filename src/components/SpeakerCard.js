@@ -124,7 +124,15 @@ function SpeakerCardWithoutTime({ speaker }) {
       <SpeakerDetailWrapper>
         <Title>{speaker.title}</Title>
         <Name>{speaker.name}</Name>
-        <Detail>{speaker.detail} <Link to={"/speakers/" + speaker.slug}>Read more</Link></Detail>
+        <Detail>{speaker.detail} {
+          (() =>
+            speaker.link === undefined ? 
+              <Link to={"/speakers/" + speaker.slug}>Read more</Link> :
+                speaker.link === 'NO_LINK' ? '' :
+                  <a href={speaker.link.location} target="_blank">{speaker.link.text}</a>
+          )()
+        }
+        </Detail>
       </SpeakerDetailWrapper>
     </SpeakerWrapper>
   )

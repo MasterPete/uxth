@@ -65,6 +65,7 @@ const speakers = [
     detail:
       'This year, we’ll be reaching out the the design communities of APAC, allowing them to nominate one presentation. We’ll then open this to a public vote and the winner will join us at UXTH.',
     image: '/images/speakers/spk_APAC_SLOT.png',
+    link: 'NO_LINK'
   },
   {
     slug: 'xxx',
@@ -74,6 +75,10 @@ const speakers = [
     detail:
       'Have you ever wanted to step on stage but for whatever reason haven’t achieved that goal yet? This might be your chance. We’ll be opening a call for 10 minute lightning talks later in the year.',
     image: '/images/speakers/spk_LIGHTNING.png',
+    link: {
+      location: 'https://goo.gl/forms/KE1QzfujzVq6UlvH2',
+      text: 'Submit your talk now!',
+    },
   },
   {
     name: 'break',
