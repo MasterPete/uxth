@@ -241,13 +241,16 @@ const SpeakerPage = ({ header, imagePath, contents }) => (
                 {header.subtitle}
               </Subtitle>
             </Large>
-            <Tabs>
+            <Tabs contents={contents}>
               {({ currentTab, changeTab }) => (
                 <>
                   <ListRow>
-                    <List active={currentTab === 'talk'}>
-                      <TabText onClick={() => changeTab('talk')}>Talk</TabText>
-                    </List>
+                    {
+                      contents.talk &&
+                        <List active={currentTab === 'talk'}>
+                          <TabText onClick={() => changeTab('talk')}>Talk</TabText>
+                        </List>
+                    },
                     {
                       contents.workshop &&
                         <List active={currentTab === 'workshop'}>
