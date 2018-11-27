@@ -61,6 +61,7 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   max-width: 100%;
   width: 100%;
+  height: 85px;
 `
 const Ul = styled.ul`
   list-style-type: none;

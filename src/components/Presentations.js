@@ -112,7 +112,7 @@ const speakers = [
   {
     slug: 'john',
     time: 'xxx',
-    title: 'To be Confirmed',
+    title: 'Making Sense of Product Development (For Designers and Product Managers)',
     name: 'John Cutler',
     detail: (
       <>
