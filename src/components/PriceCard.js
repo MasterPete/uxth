@@ -50,7 +50,7 @@ const CardPrice = styled.p`
     font-weight: 300;
   }
 `
-const BuyTicket = styled.a`
+const BuyTicket = styled.p`
   cursor: pointer;
   color: var(--color_blue);
   font-size: 20px;
@@ -70,6 +70,7 @@ const CardFooter = styled.div`
   border-color: #ddd;
 `
 const Card = styled.div`
+  height: 100%;
   margin: 0 var(--padding_size);
   margin-bottom: var(--padding_size);
   min-width: ${cardSize};
@@ -88,6 +89,12 @@ const Card = styled.div`
       && `
       padding-top: ${props.specialTopPadding}px;
       `};
+  }
+
+  transition: all ease 0.3s;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 50px -20px rgba(0, 0, 0, 0.15);
   }
 `
 const CardBody = styled.div`
@@ -123,9 +130,7 @@ function PriceCard({
         </CardPrice>
       </CardBody>
       <CardFooter>
-        <BuyTicket href="https://book.uxth.co/conf2019/register" target="_blank">
-          Buy Ticket
-        </BuyTicket>
+        <BuyTicket>Buy Ticket</BuyTicket>
       </CardFooter>
     </Card>
   )
@@ -154,9 +159,7 @@ function PremiumPriceCard({
         </CardPrice>
       </CardBody>
       <CardFooter>
-        <BuyTicket href="https://book.uxth.co/conf2019/register" target="_blank">
-          Buy Ticket
-        </BuyTicket>
+        <BuyTicket>Buy Ticket</BuyTicket>
       </CardFooter>
     </Card>
   )

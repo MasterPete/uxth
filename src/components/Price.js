@@ -58,6 +58,8 @@ const TitleWrapper = styled.div`
 const BulkTicket = styled.div`
   display: flex;
   justify-content: center;
+  padding: 0 var(--padding_size);
+
   a {
     color: var(--color_blue_light);
     text-decoration: underline;
@@ -76,31 +78,50 @@ function Price({ id }) {
           <FancyTimer until="2019-01-01T23:59:59+07:00" />
         </TitleWrapper>
         <CardWrapper>
-          <PriceCard
-            head="Day 1"
-            title="INSPIRE"
-            subtitle="Conference only"
-            originPrice="4,950"
-            promoPrice="2,450"
-          />
-          <PriceCard
-            head="Day 2"
-            title="HANDS-ON"
-            subtitle="Workshop Only (limited seat)"
-            originPrice="11,950"
-            promoPrice="8,950"
-          />
-          <PremiumPriceCard
-            head="Day 3"
-            title="FULL EXPERIENCE"
-            subtitle="Both Conference Day 1 & Workshop Day 2"
-            originPrice="14,950"
-            promoPrice="9,950"
-          />
+          <a
+            href="https://book.uxth.co/conf2019/register"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PriceCard
+              head="Day 1"
+              title="INSPIRE"
+              subtitle="Conference only"
+              originPrice="4,950"
+              promoPrice="2,450"
+            />
+          </a>
+          <a
+            href="https://book.uxth.co/conf2019/register"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PriceCard
+              head="Day 2"
+              title="HANDS-ON"
+              subtitle="Workshop Only (limited seat)"
+              originPrice="11,950"
+              promoPrice="8,950"
+            />
+          </a>
+          <a
+            href="https://book.uxth.co/conf2019/register"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PremiumPriceCard
+              head="Day 3"
+              title="FULL EXPERIENCE"
+              subtitle="Both Conference Day 1 & Workshop Day 2"
+              originPrice="14,950"
+              promoPrice="9,950"
+            />
+          </a>
         </CardWrapper>
         <BulkTicket>
           <Label>
-            For bulk tickets or questions, contact us on <a href="tel:+66872223380">087 222 3380</a> or <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
+            For bulk tickets or questions, contact us on <a href="tel:+66872223380">087 222 3380</a>{' '}
+            or <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
           </Label>
         </BulkTicket>
       </Wrapper>
