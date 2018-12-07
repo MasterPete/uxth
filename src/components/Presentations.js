@@ -65,7 +65,7 @@ const speakers = [
     detail:
       'This year, we’ll be reaching out the the design communities of APAC, allowing them to nominate one presentation. We’ll then open this to a public vote and the winner will join us at UXTH.',
     image: '/images/speakers/spk_APAC_SLOT.png',
-    link: 'NO_LINK'
+    link: 'NO_LINK',
   },
   {
     slug: 'xxx',
@@ -84,7 +84,7 @@ const speakers = [
     name: 'break',
   },
   {
-    slug: 'xxx',
+    slug: 'jared-dana',
     time: 'xxx',
     title: 'Design for Delight — Transforming Your Designs From Good To Great',
     name: 'Jared Spool & Dana Chisnell',
