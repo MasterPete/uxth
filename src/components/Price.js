@@ -3,6 +3,7 @@ import styled from 'react-emotion'
 import FancyTimer from './FancyTimer'
 import PriceCard, { PremiumPriceCard } from './PriceCard'
 import mq from '../../utils/media-query'
+import isFlashSale from '../../utils/FeatureToggle'
 
 const Section = styled.section`
   background-image: linear-gradient(var(--color_blur_dark), var(--color_blue));
@@ -75,9 +76,17 @@ function Price({ id }) {
             Join us at <strong>The UX Thailand Conference</strong>
           </Title>
           <Label>
-            FLASH SALE - 50% OFF DAY 1, 15% OFF FULL EXPERIENCE. ENDS:
+            {isFlashSale()
+              ? 'FLASH SALE - 75% OFF DAY 1, 44% OFF FULL EXPERIENCE. ENDS:'
+              : 'Get 33% off. Early bird tickets ends January 1st 2019'}
           </Label>
-          <FancyTimer until="2018-12-21T23:59:59+07:00" />
+          <FancyTimer
+            until={
+              isFlashSale()
+                ? '2018-12-21T23:59:59+07:00'
+                : '2019-01-01T23:59:59+07:00'
+            }
+          />
         </TitleWrapper>
         <CardWrapper>
           <a
@@ -89,8 +98,8 @@ function Price({ id }) {
               head="Day 1"
               title="INSPIRE"
               subtitle="Become inspired by industry leaders from across the globe about UX and Product Management, includes networking, raffles and afterparty"
-              originPrice="2,450"
-              promoPrice="1,225"
+              originPrice="4,950"
+              promoPrice={isFlashSale() ? '1,225' : '2,450'}
             />
           </a>
           <a
@@ -103,7 +112,7 @@ function Price({ id }) {
               title="HANDS-ON"
               subtitle="Leave UX Thailand a better designer by attending our workshops. This ticket does not include day 1"
               originPrice="11,950"
-              promoPrice="8,950"
+              promoPrice={isFlashSale() ? '8,450' : '8,950'}
             />
           </a>
           <a
@@ -115,8 +124,8 @@ function Price({ id }) {
               head="Day 1 & 2"
               title="FULL EXPERIENCE"
               subtitle="Join us for the Full UX Thailand Experience with inspiring presentations and upskilling workshops plus networking and afterparty"
-              originPrice="9,950"
-              promoPrice="8,450"
+              originPrice="14,950"
+              promoPrice={isFlashSale() ? '8,450' : '9,950'}
             />
           </a>
         </CardWrapper>
