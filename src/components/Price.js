@@ -74,8 +74,8 @@ function Price({ id }) {
           <Title>
             Join us at <strong>The UX Thailand Conference</strong>
           </Title>
-          <Label>Get 33% off. Early bird tickets ends January 1st 2019</Label>
-          <FancyTimer until="2019-01-01T23:59:59+07:00" />
+          <Label>FLASH SALE - 50% OFF DAY 1, 15% OFF FULL EXPERIENCE. ENDS:</Label>
+          <FancyTimer until="2018-12-21T23:59:59+07:00" />
         </TitleWrapper>
         <CardWrapper>
           <a
