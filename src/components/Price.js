@@ -87,8 +87,8 @@ function Price({ id }) {
               head="Day 1"
               title="INSPIRE"
               subtitle="Conference only"
-              originPrice="4,950"
-              promoPrice="2,450"
+              originPrice="2,450"
+              promoPrice="1,225"
             />
           </a>
           <a
@@ -113,8 +113,8 @@ function Price({ id }) {
               head="Day 3"
               title="FULL EXPERIENCE"
               subtitle="Both Conference Day 1 & Workshop Day 2"
-              originPrice="14,950"
-              promoPrice="9,950"
+              originPrice="9,950"
+              promoPrice="8,450"
             />
           </a>
         </CardWrapper>
