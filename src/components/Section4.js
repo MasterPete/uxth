@@ -87,20 +87,22 @@ function Section4({ id }) {
             <SubTitle>Our Vision</SubTitle>
             <Body>
               <strong>
-                Our vision is for Thailand to be seen globally as a leader of great design for its
-                citizens and the world. To do this, UXTH was born to upskill and inspire the
-                community.
+                Our vision is for Thailand to be seen globally as a leader of
+                great design for its citizens and the world. To do this, UXTH
+                was born to upskill and inspire the community.
               </strong>
             </Body>
             <Body>
-              UX Thailand is a non-profit organisation that began as a series of monthly meet-ups,
-              focused on empowering the local community to do better design. Our conference is born
-              to inspire and upskill but also to be recognised globally for this event.
+              UX Thailand is a non-profit organisation that began as a series of
+              monthly meet-ups, focused on empowering the local community to do
+              better design. Our conference is born to inspire and upskill but
+              also to be recognised globally for this event.
             </Body>
             <Body>
-              The money that is made is invested in further empowering the local community. We’ll
-              use the revenue to provide more regular events like our monthly meetup, training
-              courses throughout the year and hope to build relationships across APAC.
+              The money that is made is invested in further empowering the local
+              community. We’ll use the revenue to provide more regular events
+              like our monthly meetup, training courses throughout the year and
+              hope to build relationships across APAC.
             </Body>
           </div>
         </Layout>

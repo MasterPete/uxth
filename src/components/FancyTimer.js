@@ -47,9 +47,7 @@ function FancyTimer(props) {
   return (
     <Container>
       <Timer {...props}>
-        {({
-          day, hour, min, sec,
-        }) => (
+        {({ day, hour, min, sec }) => (
           <RowWrapper>
             <LabelWrapper>
               <NumberLabel>{day}</NumberLabel>

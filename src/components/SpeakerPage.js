@@ -213,16 +213,14 @@ const ListRow = styled.ul`
 const List = styled.li`
   margin: 0 16px;
   cursor: pointer;
-  ${props => props.active
-    && `
+  ${props =>
+    props.active &&
+    `
     border-bottom: 1px solid #fff;
   `};
 `
 function TabTitles({ onClick, currentTab }) {
-  return (
-    <>
-    </>
-  )
+  return <></>
 }
 
 const SpeakerPage = ({ header, imagePath, contents }) => (
@@ -237,28 +235,31 @@ const SpeakerPage = ({ header, imagePath, contents }) => (
                 <FirstNameTitle>{header.firstName}</FirstNameTitle>
                 <LastNameTitle>{header.lastName}</LastNameTitle>
               </MobileFullNameWrapper>
-              <Subtitle>
-                {header.subtitle}
-              </Subtitle>
+              <Subtitle>{header.subtitle}</Subtitle>
             </Large>
             <Tabs contents={contents}>
               {({ currentTab, changeTab }) => (
                 <>
                   <ListRow>
-                    {
-                      contents.talk &&
-                        <List active={currentTab === 'talk'}>
-                          <TabText onClick={() => changeTab('talk')}>Talk</TabText>
-                        </List>
-                    },
-                    {
-                      contents.workshop &&
-                        <List active={currentTab === 'workshop'}>
-                          <TabText onClick={() => changeTab('workshop')}>Workshop</TabText>
-                        </List>
-                    }
+                    {contents.talk && (
+                      <List active={currentTab === 'talk'}>
+                        <TabText onClick={() => changeTab('talk')}>
+                          Talk
+                        </TabText>
+                      </List>
+                    )}
+                    ,
+                    {contents.workshop && (
+                      <List active={currentTab === 'workshop'}>
+                        <TabText onClick={() => changeTab('workshop')}>
+                          Workshop
+                        </TabText>
+                      </List>
+                    )}
                     <List active={currentTab === 'biography'}>
-                      <TabText onClick={() => changeTab('biography')}>Biography</TabText>
+                      <TabText onClick={() => changeTab('biography')}>
+                        Biography
+                      </TabText>
                     </List>
                   </ListRow>
                   {contents[currentTab]}

@@ -88,7 +88,8 @@ const speakers = [
     time: 'xxx',
     title: 'Design for Delight — Transforming Your Designs From Good To Great',
     name: 'Jared Spool & Dana Chisnell',
-    detail: 'A good design is usable, useful, and effective. A great design delights its users. Explore a framework that brings your users and customers pleasure, flow, and meaning through your work.',
+    detail:
+      'A good design is usable, useful, and effective. A great design delights its users. Explore a framework that brings your users and customers pleasure, flow, and meaning through your work.',
     image: '/images/speakers/spk_JaredSpool&DanaChisnell.png',
   },
   {
@@ -97,7 +98,7 @@ const speakers = [
     title: 'Collaborative Product Innovation',
     name: 'Chris Compston',
     detail:
-      'In this full day workshop you will be combining User Story Mapping and Lean UX in a hands-on and collaborative way. Aligning understanding of your user\'s experiences, highlighting key pain points and working individually and in groups to ideate solutions.',
+      "In this full day workshop you will be combining User Story Mapping and Lean UX in a hands-on and collaborative way. Aligning understanding of your user's experiences, highlighting key pain points and working individually and in groups to ideate solutions.",
     image: '/images/speakers/spk_Chris.png',
   },
   {
@@ -112,14 +113,19 @@ const speakers = [
   {
     slug: 'john',
     time: 'xxx',
-    title: 'Making Sense of Product Development (For Designers and Product Managers)',
+    title:
+      'Making Sense of Product Development (For Designers and Product Managers)',
     name: 'John Cutler',
     detail: (
       <>
-        Software product development involves grappling with uncertainty. We do this every day when we focus, prioritize, break work down, and plan how we’ll introduce the product. Without this uncertainty, we wouldn’t have new and novel products to offer.
+        Software product development involves grappling with uncertainty. We do
+        this every day when we focus, prioritize, break work down, and plan how
+        we’ll introduce the product. Without this uncertainty, we wouldn’t have
+        new and novel products to offer.
         <br />
         <br />
-        During this workshop, John will teach you a number of valuable tools and practices to make sense of your product development effort.
+        During this workshop, John will teach you a number of valuable tools and
+        practices to make sense of your product development effort.
       </>
     ),
     image: '/images/speakers/spk_JohnCutler.svg',
@@ -167,20 +173,25 @@ function Section8({ id }) {
           <Title>Presentations & Workshops</Title>
         </TitleWrapper>
         <Layout>
-          {speakers.map(
-            speaker => (speaker.name === 'break' ? (
+          {speakers.map(speaker =>
+            speaker.name === 'break' ? (
               <>
                 <WorkshopLine />
                 <WorkshopInstruction>
-                  On Day 1 of the conference, you'll hear from each workshop facilitator about the details of their workshop. You'll then be able to sign up to the full-day workshop you'd like to attend.
+                  On Day 1 of the conference, you'll hear from each workshop
+                  facilitator about the details of their workshop. You'll then
+                  be able to sign up to the full-day workshop you'd like to
+                  attend.
                   <br />
                   <br />
-                  Note: You can only attend 1 full-day workshop. Workshop capacity limits apply but we will do our best to ensure everyone attends their first choice.
+                  Note: You can only attend 1 full-day workshop. Workshop
+                  capacity limits apply but we will do our best to ensure
+                  everyone attends their first choice.
                 </WorkshopInstruction>
               </>
             ) : (
               <SpeakerCardWithoutTime speaker={speaker} />
-            )),
+            )
           )}
         </Layout>
       </Wrapper>

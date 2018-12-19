@@ -39,7 +39,11 @@ const SpeakerTime = styled(Time)`
 
 const SpeakerImage = styled.img`
   width: 100%;
-  background-image: linear-gradient(to top right, var(--color_blue_light), var(--color_blue));
+  background-image: linear-gradient(
+    to top right,
+    var(--color_blue_light),
+    var(--color_blue)
+  );
   ${mq.s} {
     margin-left: 0px;
   }
@@ -124,14 +128,18 @@ function SpeakerCardWithoutTime({ speaker }) {
       <SpeakerDetailWrapper>
         <Title>{speaker.title}</Title>
         <Name>{speaker.name}</Name>
-        <Detail>{speaker.detail} {
-          (() =>
-            speaker.link === undefined ? 
-              <Link to={"/speakers/" + speaker.slug}>Read more</Link> :
-                speaker.link === 'NO_LINK' ? '' :
-                  <a href={speaker.link.location} target="_blank">{speaker.link.text}</a>
-          )()
-        }
+        <Detail>
+          {speaker.detail}{' '}
+          {(() =>
+            speaker.link === undefined ? (
+              <Link to={'/speakers/' + speaker.slug}>Read more</Link>
+            ) : speaker.link === 'NO_LINK' ? (
+              ''
+            ) : (
+              <a href={speaker.link.location} target="_blank">
+                {speaker.link.text}
+              </a>
+            ))()}
         </Detail>
       </SpeakerDetailWrapper>
     </SpeakerWrapper>

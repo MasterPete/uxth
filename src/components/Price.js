@@ -74,7 +74,9 @@ function Price({ id }) {
           <Title>
             Join us at <strong>The UX Thailand Conference</strong>
           </Title>
-          <Label>FLASH SALE - 50% OFF DAY 1, 15% OFF FULL EXPERIENCE. ENDS:</Label>
+          <Label>
+            FLASH SALE - 50% OFF DAY 1, 15% OFF FULL EXPERIENCE. ENDS:
+          </Label>
           <FancyTimer until="2018-12-21T23:59:59+07:00" />
         </TitleWrapper>
         <CardWrapper>
@@ -86,7 +88,7 @@ function Price({ id }) {
             <PriceCard
               head="Day 1"
               title="INSPIRE"
-              subtitle="Conference only"
+              subtitle="Become inspired by industry leaders from across the globe about UX and Product Management, includes networking, raffles and afterparty"
               originPrice="2,450"
               promoPrice="1,225"
             />
@@ -99,7 +101,7 @@ function Price({ id }) {
             <PriceCard
               head="Day 2"
               title="HANDS-ON"
-              subtitle="Workshop Only (limited seat)"
+              subtitle="Leave UX Thailand a better designer by attending our workshops. This ticket does not include day 1"
               originPrice="11,950"
               promoPrice="8,950"
             />
@@ -110,9 +112,9 @@ function Price({ id }) {
             rel="noopener noreferrer"
           >
             <PremiumPriceCard
-              head="Day 3"
+              head="Day 1 & 2"
               title="FULL EXPERIENCE"
-              subtitle="Both Conference Day 1 & Workshop Day 2"
+              subtitle="Join us for the Full UX Thailand Experience with inspiring presentations and upskilling workshops plus networking and afterparty"
               originPrice="9,950"
               promoPrice="8,450"
             />
@@ -120,8 +122,9 @@ function Price({ id }) {
         </CardWrapper>
         <BulkTicket>
           <Label>
-            For bulk tickets or questions, contact us on <a href="tel:+66872223380">087 222 3380</a>{' '}
-            or <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
+            For bulk tickets or questions, contact us on{' '}
+            <a href="tel:+66872223380">087 222 3380</a> or{' '}
+            <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
           </Label>
         </BulkTicket>
       </Wrapper>

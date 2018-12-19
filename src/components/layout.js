@@ -26,9 +26,15 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'uxth, ux thailand' },
           ]}
         >
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta property='og:title' content='UX Thailand Conference' />
-          <meta property='og:image' content='https://uxth.co/images/uxth-og-image.png' />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta property="og:title" content="UX Thailand Conference" />
+          <meta
+            property="og:image"
+            content="https://uxth.co/images/uxth-og-image.png"
+          />
           <html lang="en" />
         </Helmet>
         <Navbar />

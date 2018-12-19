@@ -85,8 +85,9 @@ const Card = styled.div`
   }
 
   @media (max-width: 1100px) {
-    ${props => props.specialTopPadding
-      && `
+    ${props =>
+      props.specialTopPadding &&
+      `
       padding-top: ${props.specialTopPadding}px;
       `};
   }
@@ -113,9 +114,7 @@ const CardHeader = styled.div`
   padding: ${paddingSize};
 `
 
-function PriceCard({
-  head, title, subtitle, originPrice, promoPrice,
-}) {
+function PriceCard({ head, title, subtitle, originPrice, promoPrice }) {
   return (
     <Card>
       <CardHeader>
@@ -141,9 +140,7 @@ const HatImage = styled.img`
   top: -80px;
   left: calc(50% - 75px);
 `
-function PremiumPriceCard({
-  head, title, subtitle, originPrice, promoPrice,
-}) {
+function PremiumPriceCard({ head, title, subtitle, originPrice, promoPrice }) {
   return (
     <Card specialTopPadding={64}>
       <CardHeader>
