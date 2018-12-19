@@ -65,12 +65,25 @@ const Button = styled.button`
 const StyledAnchor = styled.a`
   ${ButtonStyle};
 `
-function AnchorButton({ children, ...props }) {
-  return (
-    <StyledAnchor role="button" {...props}>
-      {children}
-    </StyledAnchor>
-  )
+
+const FlashSalesStyledAnchor = styled(StyledAnchor)`
+  background: #d35400;
+`
+
+function AnchorButton({ children, isFlashSales, ...props }) {
+  if (isFlashSales) {
+    return (
+      <FlashSalesStyledAnchor role="button" {...props}>
+        {children}
+      </FlashSalesStyledAnchor>
+    )
+  } else {
+    return (
+      <StyledAnchor role="button" {...props}>
+        {children}
+      </StyledAnchor>
+    )
+  }
 }
 
 export default Button
