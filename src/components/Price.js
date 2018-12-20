@@ -102,29 +102,23 @@ function Price({ id }) {
               promoPrice={isFlashSale() ? '1,225' : '2,450'}
             />
           </a>
-          <a
-            href="https://book.uxth.co/conf2019/register"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a target="_blank" rel="noopener noreferrer">
             <PriceCard
               head="Day 2"
               title="HANDS-ON"
               subtitle="Leave UX Thailand a better designer by attending our workshops. This ticket does not include day 1"
               originPrice="11,950"
+              soldOut
               promoPrice={isFlashSale() ? '8,450' : '8,950'}
             />
           </a>
-          <a
-            href="https://book.uxth.co/conf2019/register"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a target="_blank" rel="noopener noreferrer">
             <PremiumPriceCard
               head="Day 1 & 2"
               title="FULL EXPERIENCE"
               subtitle="Join us for the Full UX Thailand Experience with inspiring presentations and upskilling workshops plus networking and afterparty"
               originPrice="14,950"
+              soldOut
               promoPrice={isFlashSale() ? '8,450' : '9,950'}
             />
           </a>

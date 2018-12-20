@@ -59,6 +59,14 @@ const BuyTicket = styled.p`
   display: block;
   text-align: center;
 `
+const SoldOut = styled.p`
+  color: var(--color_red);
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  display: block;
+  text-align: center;
+`
 const CardFooter = styled.div`
   background: #fff;
   border-bottom-left-radius: 8px;
@@ -114,7 +122,14 @@ const CardHeader = styled.div`
   padding: ${paddingSize};
 `
 
-function PriceCard({ head, title, subtitle, originPrice, promoPrice }) {
+function PriceCard({
+  head,
+  title,
+  subtitle,
+  originPrice,
+  promoPrice,
+  soldOut,
+}) {
   return (
     <Card>
       <CardHeader>
@@ -129,7 +144,11 @@ function PriceCard({ head, title, subtitle, originPrice, promoPrice }) {
         </CardPrice>
       </CardBody>
       <CardFooter>
-        <BuyTicket>Buy Ticket</BuyTicket>
+        {soldOut ? (
+          <SoldOut>SOLD OUT</SoldOut>
+        ) : (
+          <BuyTicket>Buy Ticket</BuyTicket>
+        )}
       </CardFooter>
     </Card>
   )
@@ -140,7 +159,14 @@ const HatImage = styled.img`
   top: -80px;
   left: calc(50% - 75px);
 `
-function PremiumPriceCard({ head, title, subtitle, originPrice, promoPrice }) {
+function PremiumPriceCard({
+  head,
+  title,
+  subtitle,
+  originPrice,
+  promoPrice,
+  soldOut,
+}) {
   return (
     <Card specialTopPadding={64}>
       <CardHeader>
@@ -156,7 +182,11 @@ function PremiumPriceCard({ head, title, subtitle, originPrice, promoPrice }) {
         </CardPrice>
       </CardBody>
       <CardFooter>
-        <BuyTicket>Buy Ticket</BuyTicket>
+        {soldOut ? (
+          <SoldOut>SOLD OUT</SoldOut>
+        ) : (
+          <BuyTicket>Buy Ticket</BuyTicket>
+        )}
       </CardFooter>
     </Card>
   )
