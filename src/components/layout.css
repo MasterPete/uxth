@@ -93,13 +93,16 @@
   --color_grey_super_light: #e8e8e8;
   --color_almost_white: #f8f8f8;
   --color_black: #484848;
+  --color_orange: #d35400;
+  --color_orange_dark: #a94402;
 
   --padding_size: 20px;
   --layout_width_size_large: 1200px;
 }
 body {
-  font-family: 'NunitoSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'NunitoSans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
   font-size: 18px;

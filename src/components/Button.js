@@ -35,8 +35,17 @@ const OutlineStyle = css`
     border-color: var(--color_blue_active);
   }
 `
+const FlashSaleStyle = css`
+  background: var(--color_orange);
+  border-color: var(--color_orange);
 
-const ButtonStyle = ({ outline, stretchOn = '0px' }) => css`
+  &:hover {
+    background: var(--color_orange_dark);
+    border-color: var(--color_orange_dark);
+  }
+`
+
+const ButtonStyle = ({ outline, stretchOn = '0px', isFlashSales }) => css`
   font-size: 16px;
   min-height: 44px;
   cursor: pointer;
@@ -56,6 +65,8 @@ const ButtonStyle = ({ outline, stretchOn = '0px' }) => css`
   }
 
   ${outline ? OutlineStyle : PrimaryStyle};
+
+  ${isFlashSales && FlashSaleStyle};
 `
 
 const Button = styled.button`
@@ -66,24 +77,15 @@ const StyledAnchor = styled.a`
   ${ButtonStyle};
 `
 
-const FlashSalesStyledAnchor = styled(StyledAnchor)`
-  background: #d35400;
-`
-
-function AnchorButton({ children, isFlashSales, ...props }) {
-  if (isFlashSales) {
-    return (
-      <FlashSalesStyledAnchor role="button" {...props}>
-        {children}
-      </FlashSalesStyledAnchor>
-    )
-  } else {
-    return (
-      <StyledAnchor role="button" {...props}>
-        {children}
-      </StyledAnchor>
-    )
-  }
+function AnchorButton({ children, ...props }) {
+  return (
+    <StyledAnchor role="button" {...props}>
+      {children}
+    </StyledAnchor>
+  )
+}
+AnchorButton.defaultProps = {
+  isFlashSales: false,
 }
 
 export default Button
