@@ -27,6 +27,11 @@ const Body = styled.p`
   font-style: italic;
   font-size: 20px;
   font-weight: 300;
+`
+const SmallerBody = styled.p`
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 300;
   margin-bottom: 64px;
 `
 const BodyHightlight = styled.p`
@@ -60,9 +65,13 @@ function Section1({ id }) {
             A two-day conference for people who build world-class products.
           </HeroText>
           <BodyHightlight>23-24 February, 2019</BodyHightlight>
-          <Body>
-            Venue To Be Confirmed, (Central Bangkok, Near BTS/MRT station)
-          </Body>
+          <Body>Siam Square, Bangkok</Body>
+          <SmallerBody>
+            Day 1: KBank Siam Pic-Ganesha Theatre <br />
+            Day 2: Novotel on Siam Square
+          </SmallerBody>
+
+
           {isFlashSale() && (
             <FlashSaleHighlight>
               FLASH SALE, UP TO 75% OFF ENDS 21/12
