@@ -138,7 +138,7 @@ function Section5({ id }) {
             </Li>
             <Li>
               <AnchorButton
-                href="/files/UXTH Conference 2019 Sponsor Packdec.pdf"
+                href="/files/UXTH_Conference_2019_Sponsor_Packdec.pdf"
                 target="_blank"
                 outline
                 stretchOn={stretchSize}
