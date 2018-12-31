@@ -3,7 +3,7 @@ import styled from 'react-emotion'
 import FancyTimer from './FancyTimer'
 import PriceCard, { PremiumPriceCard } from './PriceCard'
 import mq from '../../utils/media-query'
-import isFlashSale from '../../utils/FeatureToggle'
+import { isYear2019 } from '../../utils/FeatureToggle'
 
 const Section = styled.section`
   background-image: linear-gradient(var(--color_blur_dark), var(--color_blue));
@@ -76,16 +76,12 @@ function Price({ id }) {
             Join us at <strong>The UX Thailand Conference</strong>
           </Title>
           <Label>
-            {isFlashSale()
-              ? 'FLASH SALE - 75% OFF DAY 1, 44% OFF FULL EXPERIENCE. ENDS:'
+            {isYear2019()
+              ? 'The biggest UX & Product conference in Thailand starts in...'
               : 'Get 33% off. Early bird tickets ends January 1st 2019'}
           </Label>
           <FancyTimer
-            until={
-              isFlashSale()
-                ? '2018-12-21T23:59:59+07:00'
-                : '2019-01-01T23:59:59+07:00'
-            }
+            until={isYear2019() ? '2019-02-23T00:00:00+07:00' : '2019-01-01T23:59:59+07:00'}
           />
         </TitleWrapper>
         <CardWrapper>
@@ -98,8 +94,8 @@ function Price({ id }) {
               head="Day 1"
               title="INSPIRE"
               subtitle="Become inspired by industry leaders from across the globe about UX and Product Management, includes networking, raffles and afterparty"
-              originPrice="4,950"
-              promoPrice={isFlashSale() ? '1,225' : '2,450'}
+              originPrice={isYear2019() ? null : '4,950'}
+              promoPrice={isYear2019() ? '4,950' : '2,450'}
             />
           </a>
           <a target="_blank" rel="noopener noreferrer">
@@ -107,9 +103,9 @@ function Price({ id }) {
               head="Day 2"
               title="HANDS-ON"
               subtitle="Leave UX Thailand a better designer by attending our workshops. This ticket does not include day 1"
-              originPrice="11,950"
+              originPrice={isYear2019() ? null : '11,950'}
               soldOut
-              promoPrice={isFlashSale() ? '8,450' : '8,950'}
+              promoPrice={isYear2019() ? '11,950' : '8,950'}
             />
           </a>
           <a target="_blank" rel="noopener noreferrer">
@@ -117,17 +113,16 @@ function Price({ id }) {
               head="Day 1 & 2"
               title="FULL EXPERIENCE"
               subtitle="Join us for the Full UX Thailand Experience with inspiring presentations and upskilling workshops plus networking and afterparty"
-              originPrice="14,950"
+              originPrice={isYear2019() ? null : '14,950'}
               soldOut
-              promoPrice={isFlashSale() ? '8,450' : '9,950'}
+              promoPrice={isYear2019() ? '14,950' : '9,950'}
             />
           </a>
         </CardWrapper>
         <BulkTicket>
           <Label>
-            For bulk tickets or questions, contact us on{' '}
-            <a href="tel:+66872223380">087 222 3380</a> or{' '}
-            <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
+            For bulk tickets or questions, contact us on <a href="tel:+66872223380">087 222 3380</a>{' '}
+            or <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
           </Label>
         </BulkTicket>
       </Wrapper>

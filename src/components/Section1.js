@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'react-emotion'
 import { AnchorButton } from './Button'
 import mq, { breakpoints } from '../../utils/media-query'
-import isFlashSale from '../../utils/FeatureToggle'
 
 const Section = styled.section`
   background: url('/images/hero-lg.png') no-repeat center center fixed;
@@ -49,21 +48,13 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 0 var(--padding_size);
 `
-const FlashSaleHighlight = styled.p`
-  font-size: 20px;
-  color: var(--color_orange);
-  font-weight: 700;
-  margin-bottom: 24px;
-`
 
 function Section1({ id }) {
   return (
     <Section id={id}>
       <Container>
         <HeroSectionTextWrapper>
-          <HeroText>
-            A two-day conference for people who build world-class products.
-          </HeroText>
+          <HeroText>A two-day conference for people who build world-class products.</HeroText>
           <BodyHightlight>23-24 February, 2019</BodyHightlight>
           <Body>Siam Square, Bangkok</Body>
           <SmallerBody>
@@ -71,17 +62,10 @@ function Section1({ id }) {
             Day 2: Novotel on Siam Square
           </SmallerBody>
 
-
-          {isFlashSale() && (
-            <FlashSaleHighlight>
-              FLASH SALE, UP TO 75% OFF ENDS 21/12
-            </FlashSaleHighlight>
-          )}
           <AnchorButton
             href="https://book.uxth.co/conf2019/register"
             target="_blank"
             stretchOn={`${breakpoints.s}px`}
-            isFlashSales={isFlashSale()}
           >
             buy ticket
           </AnchorButton>
