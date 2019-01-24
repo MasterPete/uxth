@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'react-emotion'
-import Button, { AnchorButton } from './Button'
+import { AnchorButton } from './Button'
 import mq, { breakpoints } from '../../utils/media-query'
+import {GridRow} from './GridRow'
 
 const Section = styled.section`
   padding: 80px 0;
@@ -32,7 +33,9 @@ const SubTitle = styled.h4`
 const HeaderWrapper = styled.header`
   text-align: center;
 `
-const FooterWrapper = styled.footer``
+const FooterWrapper = styled.footer`
+  margin-top: 80px;
+`
 const Body = styled.span`
   font-size: 14px;
   font-weight: 300;
@@ -42,26 +45,13 @@ const Body = styled.span`
 
 const SponsorContainer = styled.div`
   margin: 0 auto;
-  padding: 60px 0;
-`
-const SponsorRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  ${mq.s} {
-    flex-direction: column;
-  }
-`
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 8px;
+  max-width: 890px;
 `
 const Image = styled.img`
+  height: 100%;
   max-width: 100%;
-  width: 100%;
-  height: 85px;
+  max-height: 100%;
+  margin: auto;
 `
 const Ul = styled.ul`
   list-style-type: none;
@@ -79,6 +69,18 @@ const Li = styled.li`
     text-align: center;
   }
 `
+
+const SponsorTitle = styled.p`
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color_almost_white);
+  text-align: center;
+
+  margin-top: 40px;
+  margin-bottom: 10px;
+`
+
 const stretchSize = `${breakpoints.l}px`
 function Section5({ id }) {
   return (
@@ -91,39 +93,44 @@ function Section5({ id }) {
           <SubTitle>Our partners in achieving our vision</SubTitle>
         </HeaderWrapper>
         <SponsorContainer>
-          <SponsorRow>
-            <ImageWrapper>
-              <Image src="/images/sponsors/thoughtworks.svg" alt="" />
-            </ImageWrapper>
-            <ImageWrapper>
-              <Image src="/images/sponsors/bridqeasia.svg" alt="" />
-            </ImageWrapper>
-            <ImageWrapper>
-              <Image src="/images/sponsors/ntl.svg" alt="" />
-            </ImageWrapper>
-            <ImageWrapper>
-              <Image src="/images/sponsors/sketch.svg" alt="" />
-            </ImageWrapper>
-            <ImageWrapper>
-              <Image src="/images/sponsors/balsamiq.png" alt="" />
-            </ImageWrapper>
-          </SponsorRow>
-          <SponsorRow>
-            <ImageWrapper>
-              <Image src="/images/sponsors/rosenfeld.svg" alt="" />
-            </ImageWrapper>
-            <ImageWrapper>
-              <Image src="/images/sponsors/foundation.svg" alt="" />
-            </ImageWrapper>
-            <ImageWrapper>
-              <Image src="/images/sponsors/axure.svg" alt="" />
-            </ImageWrapper>
-          </SponsorRow>
+          <SponsorTitle>
+            Premier
+          </SponsorTitle>
+          <GridRow column={3} height={150}>
+            <Image src="/images/sponsors/bridqeasia.png" />
+            <Image src="/images/sponsors/thoughtworks.svg" />
+            <Image src="/images/sponsors/kbtg.png" />
+          </GridRow>
+          <SponsorTitle>
+            Executive
+          </SponsorTitle>
+          <GridRow column={4} height={100}>
+            <Image src="/images/sponsors/sketch.svg" />
+            <Image src="/images/sponsors/ntl.svg" />
+            <Image src="/images/sponsors/odds.png" />
+            <Image src="/images/sponsors/krungthai.png" />
+          </GridRow>
+          <SponsorTitle>
+            Associate
+          </SponsorTitle>
+          <GridRow column={2} height={100} maxWidth="380px">
+            <Image src="/images/sponsors/balsamiq.png" />
+            <Image src="/images/sponsors/maqe.png" />
+          </GridRow>
+          <SponsorTitle>
+            Partner
+          </SponsorTitle>
+          <GridRow column={4} height={100}>
+            <Image src="/images/sponsors/rosenfeld.svg" />
+            <Image src="/images/sponsors/foundation.svg" />
+            <Image src="/images/sponsors/axure.svg" />
+            <Image src="/images/sponsors/designup.png" />
+          </GridRow>
         </SponsorContainer>
         <FooterWrapper>
           <Ul>
             <Li>
-              <Body>Join us on this journey, to sponsor our vision</Body>
+              <Body>How to be apart of this UXTH Conference 2019,</Body>
             </Li>
             <Li>
               <AnchorButton
@@ -134,7 +141,7 @@ function Section5({ id }) {
               </AnchorButton>
             </Li>
             <Li>
-              <Body>or to find out more</Body>
+              <Body>or getting more detail</Body>
             </Li>
             <Li>
               <AnchorButton
