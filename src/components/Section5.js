@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'react-emotion'
 import { AnchorButton } from './Button'
 import mq, { breakpoints } from '../../utils/media-query'
-import {GridRow} from './GridRow'
+import { GridRow } from './GridRow'
 
 const Section = styled.section`
   padding: 80px 0;
@@ -93,38 +93,31 @@ function Section5({ id }) {
           <SubTitle>Our partners in achieving our vision</SubTitle>
         </HeaderWrapper>
         <SponsorContainer>
-          <SponsorTitle>
-            Premier
-          </SponsorTitle>
+          <SponsorTitle>Premier</SponsorTitle>
           <GridRow column={3} height={150}>
             <Image src="/images/sponsors/bridqeasia.png" />
             <Image src="/images/sponsors/thoughtworks.svg" />
             <Image src="/images/sponsors/kbtg.png" />
           </GridRow>
-          <SponsorTitle>
-            Executive
-          </SponsorTitle>
+          <SponsorTitle>Executive</SponsorTitle>
           <GridRow column={4} height={100}>
             <Image src="/images/sponsors/sketch.svg" />
             <Image src="/images/sponsors/ntl.svg" />
             <Image src="/images/sponsors/odds.png" />
             <Image src="/images/sponsors/krungthai.png" />
           </GridRow>
-          <SponsorTitle>
-            Associate
-          </SponsorTitle>
+          <SponsorTitle>Associate</SponsorTitle>
           <GridRow column={2} height={100} maxWidth="380px">
             <Image src="/images/sponsors/balsamiq.png" />
             <Image src="/images/sponsors/maqe.png" />
           </GridRow>
-          <SponsorTitle>
-            Partner
-          </SponsorTitle>
-          <GridRow column={4} height={100}>
+          <SponsorTitle>Partner</SponsorTitle>
+          <GridRow column={5} height={100}>
             <Image src="/images/sponsors/rosenfeld.svg" />
             <Image src="/images/sponsors/foundation.svg" />
             <Image src="/images/sponsors/axure.svg" />
             <Image src="/images/sponsors/designup.png" />
+            <Image src="images/sponsors/epam.svg" />
           </GridRow>
         </SponsorContainer>
         <FooterWrapper>

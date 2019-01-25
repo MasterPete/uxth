@@ -81,7 +81,11 @@ function Price({ id }) {
               : 'Get 33% off. Early bird tickets ends January 1st 2019'}
           </Label>
           <FancyTimer
-            until={isYear2019() ? '2019-02-23T00:00:00+07:00' : '2019-01-01T23:59:59+07:00'}
+            until={
+              isYear2019()
+                ? '2019-02-23T00:00:00+07:00'
+                : '2019-01-01T23:59:59+07:00'
+            }
           />
         </TitleWrapper>
         <CardWrapper>
@@ -121,8 +125,9 @@ function Price({ id }) {
         </CardWrapper>
         <BulkTicket>
           <Label>
-            For bulk tickets or questions, contact us on <a href="tel:+66872223380">087 222 3380</a>{' '}
-            or <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
+            For bulk tickets or questions, contact us on{' '}
+            <a href="tel:+66872223380">087 222 3380</a> or{' '}
+            <a href="mailto:uxthconf@gmail.com">uxthconf@gmail.com</a>.
           </Label>
         </BulkTicket>
       </Wrapper>

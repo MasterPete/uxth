@@ -94,8 +94,9 @@ const Card = styled.div`
   }
 
   @media (max-width: 1100px) {
-    ${props => props.specialTopPadding
-      && `
+    ${props =>
+      props.specialTopPadding &&
+      `
       padding-top: ${props.specialTopPadding}px;
       `};
   }
@@ -123,7 +124,12 @@ const CardHeader = styled.div`
 `
 
 function PriceCard({
-  head, title, subtitle, originPrice, promoPrice, soldOut,
+  head,
+  title,
+  subtitle,
+  originPrice,
+  promoPrice,
+  soldOut,
 }) {
   return (
     <Card>
@@ -139,7 +145,11 @@ function PriceCard({
         </CardPrice>
       </CardBody>
       <CardFooter>
-        {soldOut ? <SoldOut>SOLD OUT</SoldOut> : <BuyTicket>Buy Ticket</BuyTicket>}
+        {soldOut ? (
+          <SoldOut>SOLD OUT</SoldOut>
+        ) : (
+          <BuyTicket>Buy Ticket</BuyTicket>
+        )}
       </CardFooter>
     </Card>
   )
@@ -151,7 +161,12 @@ const HatImage = styled.img`
   left: calc(50% - 75px);
 `
 function PremiumPriceCard({
-  head, title, subtitle, originPrice, promoPrice, soldOut,
+  head,
+  title,
+  subtitle,
+  originPrice,
+  promoPrice,
+  soldOut,
 }) {
   return (
     <Card specialTopPadding={64}>
@@ -162,13 +177,19 @@ function PremiumPriceCard({
         <CardSubtitle>{subtitle}</CardSubtitle>
       </CardHeader>
       <CardBody>
-        {originPrice != null && <CardPriceDiscount>{originPrice}</CardPriceDiscount>}
+        {originPrice != null && (
+          <CardPriceDiscount>{originPrice}</CardPriceDiscount>
+        )}
         <CardPrice>
           {promoPrice} <small>THB</small>
         </CardPrice>
       </CardBody>
       <CardFooter>
-        {soldOut ? <SoldOut>SOLD OUT</SoldOut> : <BuyTicket>Buy Ticket</BuyTicket>}
+        {soldOut ? (
+          <SoldOut>SOLD OUT</SoldOut>
+        ) : (
+          <BuyTicket>Buy Ticket</BuyTicket>
+        )}
       </CardFooter>
     </Card>
   )

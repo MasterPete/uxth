@@ -54,7 +54,9 @@ function Section1({ id }) {
     <Section id={id}>
       <Container>
         <HeroSectionTextWrapper>
-          <HeroText>A two-day conference for people who build world-class products.</HeroText>
+          <HeroText>
+            A two-day conference for people who build world-class products.
+          </HeroText>
           <BodyHightlight>23-24 February, 2019</BodyHightlight>
           <Body>Siam Square, Bangkok</Body>
           <SmallerBody>
