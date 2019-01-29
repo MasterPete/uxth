@@ -90,7 +90,6 @@ function Price({ id }) {
         </TitleWrapper>
         <CardWrapper>
           <a
-            href="https://book.uxth.co/conf2019/register"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -98,6 +97,7 @@ function Price({ id }) {
               head="Day 1"
               title="INSPIRE"
               subtitle="Become inspired by industry leaders from across the globe about UX and Product Management, includes networking, raffles and afterparty"
+              soldOut
               originPrice={isYear2019() ? null : '4,950'}
               promoPrice={isYear2019() ? '4,950' : '2,450'}
             />
