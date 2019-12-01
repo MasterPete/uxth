@@ -1,7 +1,6 @@
 import React from 'react'
 
-const calculateTimeLeft = dateStr =>
-  Math.round((new Date(dateStr).getTime() - new Date().getTime()) / 1000)
+const calculateTimeLeft = dateStr => Math.round((new Date(dateStr).getTime() - new Date().getTime()) / 1000)
 
 class Timer extends React.Component {
   state = {
@@ -14,14 +13,14 @@ class Timer extends React.Component {
       const { timeLeft } = this.state
       if (timeLeft <= 0) {
         clearInterval(interval)
-        this.setState({ finish: true })
+        this.setState({ finish: true, timeLeft: 0 })
       } else {
         this.setState({ timeLeft: timeLeft - 1 })
       }
     }, 1000)
   }
 
-  calculateTime = timeLeft => {
+  calculateTime = (timeLeft) => {
     const day = Math.floor(timeLeft / 86400)
     const hour = Math.floor((timeLeft % 86400) / 3600)
     const min = Math.floor((timeLeft % 3600) / 60)
@@ -36,7 +35,9 @@ class Timer extends React.Component {
 
   render() {
     const { timeLeft, finish } = this.state
-    const { day, hour, min, sec } = this.calculateTime(timeLeft)
+    const {
+      day, hour, min, sec,
+    } = this.calculateTime(timeLeft)
 
     return this.props.children({
       day,
