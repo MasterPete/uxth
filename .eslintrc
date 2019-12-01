@@ -1,3 +1,6 @@
 {
-  "extends": "hamcompe"
+  "extends": "hamcompe",
+  "rules": {
+    "react/destructuring-assignment": 0
+  }
 }
