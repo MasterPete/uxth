@@ -100,7 +100,7 @@
   --padding_size: 20px;
   --layout_width_size_large: 1200px;
 }
-body {
+body,html {
   font-family: 'NunitoSans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
@@ -109,6 +109,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
+
 }
 
 a {
