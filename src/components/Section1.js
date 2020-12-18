@@ -61,7 +61,7 @@ function Section1({ id }) {
       <Container>
         <HeroSectionTextWrapper>
           <HeroText>UXThailand Conference 2021 Coming Soon !</HeroText>
-          <Body>Keep stay in touch with us</Body>
+          <Body>Please, stay in touch with us</Body>
           {/* <AnchorButton
             href="https://book.uxth.co/conf2019/register"
             target="_blank"
